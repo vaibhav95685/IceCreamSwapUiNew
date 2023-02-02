@@ -113,6 +113,32 @@ const config: (
       showItemsOnMobile: false,
       items: [],
     },
+    {
+      label: t('Launchpad'),
+      href: '/launchpad',
+      icon: EarnIcon,
+      fillIcon: EarnFillIcon,
+      image: '/images/decorations/pe2.png',
+      showItemsOnMobile: false,
+      supportChainIds: [...SUPPORT_FARMS, ...SUPPORT_STAKING],
+      items: [
+        {
+          label: t('Create Token'),
+          href: '/createtoken',
+          supportChainIds: SUPPORT_FARMS,
+        },
+        {
+          label: t('Create Launchpad'),
+          href: '/createlaunchpad',
+          supportChainIds: SUPPORT_STAKING,
+        },
+        {
+          label: t('Current Launchpad'),
+          href: '/currentlaunchpad',
+          supportChainIds: SUPPORT_STAKING,
+        },
+      ].map((item) => addMenuItemSupported(item, chainId)),
+    },
     /*
     {
       label: t('Win'),
