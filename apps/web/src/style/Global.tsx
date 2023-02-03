@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
       max-width: 100%;
     }
-  }
+    
+     
 `
 
 export default GlobalStyle
