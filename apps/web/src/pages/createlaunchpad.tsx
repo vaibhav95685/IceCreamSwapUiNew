@@ -49,26 +49,63 @@ const MultiStepForm = () => {
 const Step1 = ({ handleNextStep }) => (
 
   <div>
-    <h2 style={{fontSize:"20px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
+     <h2 style={{fontSize:"20px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the token address and verify</h3>
     <div   className="row setup-content" id="step-1">
-        <div   className="col-xs-12">
-            <div   className="col-md-12">
-                <div   className="form-group">
-                    <label className="control-label">First Name</label>
-                    <input type="text"     className="form-control" placeholder="Enter First Name"  />
+        <div   className="col-xs-8">
+            <div   className="col-md-8">
+                <div style={{ marginTop:'20px' }} className="form-group">
+                    <label  className="control-label ">Token Address</label>
+                    <input style={{ marginTop:'10px' }} type="text"className="form-control"  />
                 </div>
-                <div   className="form-group">
-                    <label className="control-label">Last Name</label>
-                    <input type="text"     className="form-control" placeholder="Enter Last Name" />
+               
+                <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
+                  <h2>Currency</h2>
+                  <div style={{marginTop:"10px", marginBottom:"4px"}}>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label >BNB</label><br/>
+                  </div>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label >BUSD</label><br/>
+                  <div style={{marginTop:"4px", marginBottom:"4px"}}>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label >USDC</label><br/>
+                  </div>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label >USDT</label><br/>
+                  </div>
+
+                  <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
+                  <h2>Fee Options</h2>
+                  
+                  <div style={{marginTop:"10px", marginBottom:"4px"}}>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
+                  <label >5% BNB raised only</label><br/>
+                  </div>
+                  <div style={{marginTop:"4px", marginBottom:"4px"}}>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
+                  <label >Other</label><br/>
+                  </div>
+                  </div>
+
+                  <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
+                  <h2>Listing Options</h2>
+                  <div style={{marginTop:"10px", marginBottom:"4px"}}>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
+                  <label >Auto Listing</label><br/>
+                  </div>
+                  <div style={{marginTop:"4px", marginBottom:"4px"}}>
+                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
+                  <label >Manual Listing</label><br/>
+                  </div>
                 </div>
-              
             </div>
         </div>
     </div>
     <button  onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
-   
   </div>
+
+
 );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
@@ -276,21 +313,89 @@ const Step4 = ({ handlePrevStep }) => (
         <div   className="col-xs-12">
             <div   className="col-md-12">
                
-                <div   className="form-group">
-                    <label   className="control-label">Skills</label>
-                    <input  type="text"     className="form-control" placeholder="Enter skill or skills" />
+                <div style={{marginTop:"20px", display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Total Tocken</h2>
+                     <h2>530,875 TN</h2>
                 </div>
-                <div   className="form-group">
-                    <label   className="control-label">Comment</label>
-                    <textarea   className="form-control" placeholder="Enter Comment" ></textarea>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Factory Address</h2>
+                     <h2 style={{color:'#f8567f'}}>Dx28xxxxxxxxxxxxxxB71D3dO36bxxxxxxd5</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Tocken name</h2>
+                     <h2 style={{color:'#f8567f'}}>Test</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Tocken Symbol</h2>
+                     <h2 style={{color:'#f8567f'}}>TN</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Tocken Decimal</h2>
+                     <h2 style={{color:'#f8567f'}}>18</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Presale rate</h2>
+                     <h2 style={{color:'#f8567f'}}>10 TN</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Listing rate</h2>
+                     <h2 style={{color:'#f8567f'}}>1 TN</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Sale method</h2>
+                     <h2 style={{color:'#f8567f'}}>Public</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Softcap</h2>
+                     <h2 style={{color:'#f8567f'}}>25000 BNB</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Hardcap</h2>
+                     <h2 style={{color:'#f8567f'}}>50000 BNB</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Unsold Tokek</h2>
+                     <h2 style={{color:'#f8567f'}}>Retund</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Minimum Buy</h2>
+                     <h2 style={{color:'#f8567f'}}>0,1BNB</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Msximum Buy</h2>
+                     <h2 style={{color:'#f8567f'}}>1000000</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Liquidity</h2>
+                     <h2 style={{color:'#f8567f'}}>65%</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Stsrt time</h2>
+                     <h2 style={{color:'#f8567f'}}>2023-01-28T08.00(UTC)</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>End time</h2>
+                     <h2 style={{color:'#f8567f'}}>2023-01-31T08.00(UTC)</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>Liquidity lockup time</h2>
+                     <h2 style={{color:'#f8567f'}}>10 min</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2>webdite</h2>
+                     <h2 style={{color:'#f8567f'}}>https:/icecreamswap.com/?chainld=32520</h2>
+                </div>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
+                     <h2 style={{color:'#f8567f'}}>Description</h2>
+                     <h2 style={{color:'#f8567f'}}>Hello</h2>
                 </div>
             </div>
         </div>
     </div>
-    
     <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
     <button style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-right" > Submit </button>
   </div>
+  
 );
 
 export default MultiStepForm;
