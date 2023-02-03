@@ -48,7 +48,7 @@ const MultiStepForm = () => {
 
 const Step1 = ({ handleNextStep }) => (
 
-  <div className='container'>
+  <div>
      <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the token address and verify</h3>
     <div   className="row setup-content" id="step-1">
@@ -109,7 +109,7 @@ const Step1 = ({ handleNextStep }) => (
 );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
-  <div className='container'>
+  <div>
     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 2 - DeFi Launchpad Info</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the launchpad information that you want to raise , that should be enter all details about your presale</h3>
     <div   className="row setup-content" id="step-2">
@@ -212,7 +212,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 );
 
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
-  <div className='container'>
+  <div>
     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 3 - Add Additional Info</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Let people know who you are</h3>
     <div   className="row setup-content" id="step-3">
@@ -307,7 +307,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 );
 
 const Step4 = ({ handlePrevStep }) => (
-  <div className='container'>
+  <div >
     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 4 - Finish</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Review your information</h3>
     <div   className="row setup-content" id="step-4">
