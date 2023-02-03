@@ -48,8 +48,8 @@ const MultiStepForm = () => {
 
 const Step1 = ({ handleNextStep }) => (
 
-  <div>
-     <h2 style={{fontSize:"20px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
+  <div className='container'>
+     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the token address and verify</h3>
     <div   className="row setup-content" id="step-1">
         <div   className="col-xs-8">
@@ -62,41 +62,41 @@ const Step1 = ({ handleNextStep }) => (
                 <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
                   <h2>Currency</h2>
                   <div style={{marginTop:"10px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label >BNB</label><br/>
+                  <input style={{ accentColor:'#f8567f' , width:"20px", height:"20px", verticalAlign:"bottom"}} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>BNB</label><br/>
                   </div>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label >BUSD</label><br/>
+                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>BUSD</label><br/>
                   <div style={{marginTop:"4px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label >USDC</label><br/>
+                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>USDC</label><br/>
                   </div>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label >USDT</label><br/>
+                  <input style={{ accentColor:'#f8567f' , width:"20px", height:"20px", verticalAlign:"bottom"}} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>USDT</label><br/>
                   </div>
 
                   <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
                   <h2>Fee Options</h2>
                   
                   <div style={{marginTop:"10px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
-                  <label >5% BNB raised only</label><br/>
+                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>5% BNB raised only</label><br/>
                   </div>
                   <div style={{marginTop:"4px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
-                  <label >Other</label><br/>
+                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>Other</label><br/>
                   </div>
                   </div>
 
                   <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
                   <h2>Listing Options</h2>
                   <div style={{marginTop:"10px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
-                  <label >Auto Listing</label><br/>
+                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
+                  <label style={{marginLeft:"8px"}}>Auto Listing</label><br/>
                   </div>
                   <div style={{marginTop:"4px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
-                  <label >Manual Listing</label><br/>
+                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }}  type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
+                  <label style={{marginLeft:"8px",}}>Manual Listing</label><br/>
                   </div>
                 </div>
             </div>
@@ -109,8 +109,8 @@ const Step1 = ({ handleNextStep }) => (
 );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
-  <div>
-    <h2 style={{fontSize:"20px",marginTop:"10px", marginBottom:"5px"}}>Step 2 - DeFi Launchpad Info</h2>
+  <div className='container'>
+    <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 2 - DeFi Launchpad Info</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the launchpad information that you want to raise , that should be enter all details about your presale</h3>
     <div   className="row setup-content" id="step-2">
         <div   className="col-xs-12">
@@ -210,9 +210,10 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
   </div>
 );
+
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
-  <div>
-    <h2 style={{fontSize:"20px",marginTop:"10px", marginBottom:"5px"}}>Step 3 - Add Additional Info</h2>
+  <div className='container'>
+    <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 3 - Add Additional Info</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Let people know who you are</h3>
     <div   className="row setup-content" id="step-3">
         <div   className="col-xs-12">
@@ -306,8 +307,8 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 );
 
 const Step4 = ({ handlePrevStep }) => (
-  <div>
-    <h2 style={{fontSize:"20px",marginTop:"10px", marginBottom:"5px"}}>Step 4 - Finish</h2>
+  <div className='container'>
+    <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 4 - Finish</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Review your information</h3>
     <div   className="row setup-content" id="step-4">
         <div   className="col-xs-12">
