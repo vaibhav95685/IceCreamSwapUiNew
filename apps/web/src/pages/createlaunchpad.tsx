@@ -28,7 +28,7 @@ const MultiStepForm = () => {
    
     </Head>
       <div className="steps">
-        Step {step} of 4
+       
       </div>
       {step === 1 && (
         <Step1 handleNextStep={handleNextStep} />
@@ -48,7 +48,7 @@ const MultiStepForm = () => {
 
 const Step1 = ({ handleNextStep }) => (
 
-  <div>
+  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
      <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
     <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the token address and verify</h3>
     <div   className="row setup-content" id="step-1">
@@ -102,16 +102,18 @@ const Step1 = ({ handleNextStep }) => (
             </div>
         </div>
     </div>
+    <div style={{marginTop:"30px"}}>
     <button  onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
+    </div>
   </div>
 
 
 );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
-  <div>
+  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 2 - DeFi Launchpad Info</h2>
-    <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the launchpad information that you want to raise , that should be enter all details about your presale</h3>
+    <h3 style={{ color:"grey", marginBottom:"15px", marginTop:"15px"}}>Enter the launchpad information that you want to raise , that should be enter all details about your presale</h3>
     <div   className="row setup-content" id="step-2">
         <div   className="col-xs-12">
             <div   className="col-md-12">
@@ -204,17 +206,19 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </div>
         </div>
     </div>
-    
+    <div style={{marginTop:"30px",marginLeft:"12px"}}>
     <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
+    </div>
+    <div style={{marginTop:"30px",marginRight:"12px"}}>
     <button onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
-
+    </div>
   </div>
 );
 
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
-  <div>
+  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 3 - Add Additional Info</h2>
-    <h3 style={{ color:"grey", marginBottom:"10px"}}>Let people know who you are</h3>
+    <h3 style={{ color:"grey", marginBottom:"15px", marginTop:"15px"}}>Let people know who you are</h3>
     <div   className="row setup-content" id="step-3">
         <div   className="col-xs-12">
             <div   className="col-md-12">
@@ -301,15 +305,19 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </div>
         </div>
     </div>
+    <div style={{marginTop:"30px",marginLeft:"12px"}}>
     <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
+    </div>
+     <div style={{marginTop:"30px",marginRight:"12px"}}>
     <button onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
+ </div>
   </div>
 );
 
 const Step4 = ({ handlePrevStep }) => (
-  <div >
+  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 4 - Finish</h2>
-    <h3 style={{ color:"grey", marginBottom:"10px"}}>Review your information</h3>
+    <h3 style={{ color:"grey", marginBottom:"15px", marginTop:"15px"}}>Review your information</h3>
     <div   className="row setup-content" id="step-4">
         <div   className="col-xs-12">
             <div   className="col-md-12">
@@ -393,8 +401,12 @@ const Step4 = ({ handlePrevStep }) => (
             </div>
         </div>
     </div>
+    <div style={{marginTop:"30px",marginLeft:"12px"}}>
     <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
+  </div>
+  <div style={{marginTop:"30px",marginRight:"12px"}}>
     <button style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-right" > Submit </button>
+    </div>
   </div>
   
 );
