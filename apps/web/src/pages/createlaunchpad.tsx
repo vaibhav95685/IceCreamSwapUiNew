@@ -3,9 +3,45 @@ import Head from 'next/head';
 import Radio from './Radio';
 import Dropdown from './Dropdown';
 import Dropdown1 from './Dropdown1';
+import {  useMemo } from 'react'
+import {
+  Text,
+  Farm as FarmUI,
+  SearchInput,
+  Select,
+  Checkbox,
+   Flex,
+
+} from '@pancakeswap/uikit'
+import styled from 'styled-components'
+import { useRouter } from 'next/router'
+
+
+
+
+const LabelWrapper = styled.div`
+  > ${Text} {
+    font-size: 12px;
+  }
+`
+
+const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setQuery(event.target.value)
+}
 
 
 const MultiStepForm = () => {
+
+  const { pathname, query: urlQuery } = useRouter()
+  const [_query, setQuery] = useState('')
+  const normalizedUrlSearch = useMemo(() => (typeof urlQuery?.search === 'string' ? urlQuery.search : ''), [urlQuery])
+  const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
+
+
+ 
+
+  
+
   const [step, setStep] = useState(1);
 
   const handleNextStep = () => setStep(step + 1);
@@ -49,54 +85,68 @@ const MultiStepForm = () => {
 const Step1 = ({ handleNextStep }) => (
 
   <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
-     <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 1 - Verify Token</h2>
-    <h3 style={{ color:"grey", marginBottom:"10px"}}>Enter the token address and verify</h3>
+     <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
+     Step 1 - Verify Token
+                  </Text>
+     <Text marginTop={"15px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+     Enter the token address and verify
+                  </Text>
     <div   className="row setup-content" id="step-1">
         <div   className="col-xs-8">
             <div   className="col-md-8">
-                <div style={{ marginTop:'20px' }} className="form-group">
-                    <label  className="control-label ">Token Address</label>
-                    <input style={{ marginTop:'10px' }} type="text"className="form-control"  />
+            <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+            <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Token Address
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Enter Token Address" />
+            </LabelWrapper>
                 </div>
                
                 <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
-                  <h2>Currency</h2>
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Currency
+                  </Text>
                   <div style={{marginTop:"10px", marginBottom:"4px"}}>
                   <input style={{ accentColor:'#f8567f' , width:"20px", height:"20px", verticalAlign:"bottom"}} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>BNB</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>BNB</label><br/>
                   </div>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>BUSD</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>BUSD</label><br/>
                   <div style={{marginTop:"4px", marginBottom:"4px"}}>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>USDC</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>USDC</label><br/>
                   </div>
                   <input style={{ accentColor:'#f8567f' , width:"20px", height:"20px", verticalAlign:"bottom"}} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>USDT</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>USDT</label><br/>
                   </div>
 
                   <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
-                  <h2>Fee Options</h2>
-                  
+                  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Fee options
+                  </Text>
                   <div style={{marginTop:"10px", marginBottom:"4px"}}>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>5% BNB raised only</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>5% BNB raised only</label><br/>
                   </div>
                   <div style={{marginTop:"4px", marginBottom:"4px"}}>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>Other</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Other</label><br/>
                   </div>
                   </div>
 
                   <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
-                  <h2>Listing Options</h2>
+                  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Listing options
+                  </Text>
                   <div style={{marginTop:"10px", marginBottom:"4px"}}>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
-                  <label style={{marginLeft:"8px"}}>Auto Listing</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Auto Listing</label><br/>
                   </div>
                   <div style={{marginTop:"4px", marginBottom:"4px"}}>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }}  type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
-                  <label style={{marginLeft:"8px",}}>Manual Listing</label><br/>
+                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Manual Listing</label><br/>
+                 
                   </div>
                 </div>
             </div>
@@ -112,95 +162,267 @@ const Step1 = ({ handleNextStep }) => (
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
   <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
-    <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 2 - DeFi Launchpad Info</h2>
-    <h3 style={{ color:"grey", marginBottom:"15px", marginTop:"15px"}}>Enter the launchpad information that you want to raise , that should be enter all details about your presale</h3>
+     <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
+     Step 2 - DeFi Launchpad Info
+                  </Text>
+    <Text marginTop={"15px"} marginBottom={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
+    Enter the launchpad information that you want to raise , that should be enter all details about your presale
+                  </Text>
     <div   className="row setup-content" id="step-2">
         <div   className="col-xs-12">
             <div   className="col-md-12">
                 <div   className="form-group">
-                    <label style={{ marginBottom:"15px"}} className="control-label">Presale rate</label>
-                    <input  type="text" className="form-control" placeholder="Enter Presale rate" />
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Presale rate
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Presale rate" />
+            </LabelWrapper>
                 </div>
                 <div   className="form-group">
-                    <label   className="control-label">Whitelist</label>
+                <Text color="textSubtle" fontSize="17px" textAlign="left">
+                    Whitelist
+                  </Text>
                     <div>
                     
     <Radio/>
 
 <div style={{display:"flex", flexDirection:"row"}} >
                <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Softcap (BNB)</label>
-                    <input  type="text" className="form-control" placeholder="Enter Softcap (BNB)" />
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Softcap (BNB)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Softcap (BNB)" />
+            </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"15px",}}   className="form-group">
-                    <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Hardcap (BNB)</label>
-                    <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Enter Hardcap (BNB)" />
+                <div style={{ marginBottom:"15px",marginTop:"15px",marginLeft:"55px"}}   className="form-group">
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Hardcap (BNB)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Hardcap (BNB)" />
+            </LabelWrapper>
                 </div>
 
  </div>
 
  <div style={{display:"flex", flexDirection:"row"}} >
                <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Minimum Buy (BNB)</label>
-                    <input  type="text" className="form-control" placeholder="Minimum Buy (BNB)" />
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Minimum Buy (BNB)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Minimum Buy (BNB)" />
+            </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-                    <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Maximum Buy (BNB)</label>
-                    <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Maximum Buy (BNB)" />
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Maximum Buy (BNB)                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Hardcap (BNB)" />
+            </LabelWrapper>
                 </div>
 
  </div>
 
 
 
- <div   className="form-group">
-                    <label style={{ marginBottom:"15px"}} className="control-label">Refund Type</label>
-                    <div style={{display:"flex", flexDirection:"row"}}>
-  <div>
- <Dropdown/>
- </div>
- <div style={{marginLeft:"55px"}}>
- <Dropdown1/>
- </div>
+ <div style={{display:"flex", flexDirection:"row"}} >
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Refund Type
+                  </Text>
+                    <LabelWrapper>
+              <Select
+                options={[
+                  {
+                    label: ('Refund'),
+                    value: 'Refund',
+                  },
+                  {
+                    label: ('Burn'),
+                    value: 'Burn',
+                  },
+                  
+                 
+                ]}
+                // onOptionChange={handleSortOptionChange}
+              />
+            </LabelWrapper>
+                </div>
+
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"110px"}}   className="form-group">
+                <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Router
+                  </Text>
+                    <LabelWrapper>
+              <Select
+                options={[
+                  {
+                    label: ('Pancakeswap'),
+                    value: 'Pancakeswap',
+                  },
+                  {
+                    label: ('Pinkswap Testnet'),
+                    value: 'Pinkswap Testnet',
+                  },
+                  
+                 
+                ]}
+                // onOptionChange={handleSortOptionChange}
+              />
+            </LabelWrapper>
                 </div>
 
  </div>
  <div style={{display:"flex", flexDirection:"row"}} >
                <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Liquidity %</label>
-                    <input  type="text" className="form-control" placeholder="Liquidity %" />
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Liquidity %
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Liquidity %" />
+            </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-                    <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Listing rate</label>
-                    <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Listing rate" />
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Listing rate
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Listing rate" />
+            </LabelWrapper>
                 </div>
 
  </div>
- <label style={{marginTop:"15px",}}  className="control-label">Select start time & end time (UTC)</label>
+ <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+ Select start time & end time (UTC)
+                  </Text>
  <div style={{display:"flex", flexDirection:"row"}} >
   
                <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
               
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Start time (UTC)</label>
-                    <input  type="text" className="form-control" placeholder="Start time (UTC)" />
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                  Start time (UTC)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Start time (UTC)" />
+            </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-                    <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">End time (UTC)</label>
-                    <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="End time (UTC)" />
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                   End time (UTC)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="End time (UTC)" />
+            </LabelWrapper>
+                </div>
+
+ </div>
+ <Flex alignItems="center">
+                    <Checkbox
+                      name="own-address"
+                      type="checkbox"
+                      scale="sm"
+                    />
+                    <Text ml="10px" style={{ userSelect: 'none' }}>
+                      Use vesting ?
+                    </Text>
+                  </Flex>
+ <div style={{display:"flex", flexDirection:"row", marginTop:"10px"}} >
+  
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+              
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+               TGE Date (UTC time)*
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
+            </LabelWrapper>
+                </div>
+
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                TGE Percent
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder=" TGE Percent" />
+            </LabelWrapper>
                 </div>
 
  </div>
 
- <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Liquidity lockup (minutes)</label>
-                    <input  type="text" className="form-control" placeholder="Liquidity lockup (minutes)" />
-                </div>
+ <div style={{display:"flex", flexDirection:"row"}} >
+  
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+ 
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+  Cycle (days)*
+     </Text>
+       <LabelWrapper>
+ <SearchInput onChange={handleChangeQuery} placeholder=" Cycle (days)*" />
+</LabelWrapper>
+   </div>
 
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+   Cycle Release Percent*
+     </Text>
+       <LabelWrapper>
+ <SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
+</LabelWrapper>
+   </div>
 
+</div>
+<div style={{display:"flex", flexDirection:"row", marginTop:"10px"}} >
+  
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+ 
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+  TGE Date (UTC time)*
+     </Text>
+       <LabelWrapper>
+ <SearchInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
+</LabelWrapper>
+   </div>
+
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+   TGE Percent
+     </Text>
+       <LabelWrapper>
+ <SearchInput onChange={handleChangeQuery} placeholder=" TGE Percent" />
+</LabelWrapper>
+   </div>
+
+</div>
+
+<div style={{display:"flex", flexDirection:"row"}} >
+
+<div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+
+<Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+Cycle (days)*
+</Text>
+<LabelWrapper>
+<SearchInput onChange={handleChangeQuery} placeholder=" Cycle (days)*" />
+</LabelWrapper>
+</div>
+
+<div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+<Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+Cycle Release Percent*
+</Text>
+<LabelWrapper>
+<SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
+</LabelWrapper>
+</div>
+
+</div>
   </div>
                 </div>
             </div>
@@ -217,8 +439,14 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
   <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
-    <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 3 - Add Additional Info</h2>
-    <h3 style={{ color:"grey", marginBottom:"15px", marginTop:"15px"}}>Let people know who you are</h3>
+     <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
+     Step 3 - Add Additional Info
+                  </Text>
+    
+    <Text marginBottom={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
+    Let people know who you are
+                  </Text>
+
     <div   className="row setup-content" id="step-3">
         <div   className="col-xs-12">
             <div   className="col-md-12">
@@ -226,28 +454,21 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
   
   <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
  
-       <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Logo URL*</label>
-       <input  type="text" className="form-control" placeholder="Logo URL*" />
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Logo URL
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Logo URL*" />
+            </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-       <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Website</label>
-       <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Website" />
-   </div>
-
-</div>
-
-<div style={{display:"flex", flexDirection:"row"}} >
-  
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
- 
-       <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Facebook</label>
-       <input  type="text" className="form-control" placeholder="Facebook*" />
-   </div>
-
-   <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-       <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Twitter</label>
-       <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Twitter" />
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Website
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Website" />
+            </LabelWrapper>
    </div>
 
 </div>
@@ -256,13 +477,44 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
   
   <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
  
-       <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Github</label>
-       <input  type="text" className="form-control" placeholder="Github" />
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Facebook
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Facebook" />
+            </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-       <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Telegram</label>
-       <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Telegram" />
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Twitter
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Twitter" />
+            </LabelWrapper>
+   </div>
+
+</div>
+
+<div style={{display:"flex", flexDirection:"row"}} >
+  
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+ 
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Github
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Github" />
+            </LabelWrapper>
+   </div>
+
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Telegram
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Telegram" />
+            </LabelWrapper>
    </div>
 
 </div>
@@ -272,13 +524,21 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
   
   <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
  
-       <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Instagram</label>
-       <input  type="text" className="form-control" placeholder="Instagram" />
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Instagram
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Instagram" />
+            </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-       <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Discord</label>
-       <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Discord" />
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Discord
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Discord" />
+            </LabelWrapper>
    </div>
 
 </div>
@@ -288,19 +548,31 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
   
   <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
  
-       <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Reddit</label>
-       <input  type="text" className="form-control" placeholder="Reddit" />
+  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Reddit
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Reddit" />
+            </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",}}   className="form-group">
-       <label style={{ marginLeft:"55px",marginBottom:"15px",marginTop:"15px",}}  className="control-label">Youtube Video</label>
-       <input  style={{ marginLeft:"55px"}}  type="text" className="form-control" placeholder="Youtube Video" />
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Youtube
+                  </Text>
+       <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Youtube Video" />
+            </LabelWrapper>
    </div>
 
 </div>
 <div   className="form-group">
-                    <label style={{ marginBottom:"15px"}} className="control-label">Description</label>
-                    <input style={{ height:"150px"}} type="text" className="form-control" />
+<Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Description
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Description" />
+            </LabelWrapper>
                 </div>
             </div>
         </div>
@@ -316,8 +588,12 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 
 const Step4 = ({ handlePrevStep }) => (
   <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
-    <h2 style={{ fontSize:"25px",marginTop:"10px", marginBottom:"5px"}}>Step 4 - Finish</h2>
-    <h3 style={{ color:"grey", marginBottom:"15px", marginTop:"15px"}}>Review your information</h3>
+         <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
+         Step 4 - Finish
+                  </Text>
+    <Text marginBottom={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
+    Review your information
+                  </Text>
     <div   className="row setup-content" id="step-4">
         <div   className="col-xs-12">
             <div   className="col-md-12">
