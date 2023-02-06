@@ -37,9 +37,10 @@ function ExampleDropdown() {
     >
       <div
         style={{
-          background: '#fff',
-          border: '1px solid #000',
-          borderRadius: '4px',
+          background: '#372F47',
+          color:"grey",
+          border: '1px solid #372F47',
+          borderRadius: '10px',
           cursor: 'pointer',
           padding: '10px',
           width: '738px',
@@ -61,15 +62,16 @@ function ExampleDropdown() {
       {isOpen && (
         <ul
           style={{
-            background: '#fff',
-            border: '1px solid #000',
-            borderRadius: '4px',
+            background: '#372F47',
+            border: '1px solid #372F47',
+            borderRadius: '10px',
             listStyle: 'none',
             margin: '0',
             padding: '0',
             position: 'absolute',
             top: '100%',
             left: '0',
+            color:"grey",
             width: '738px',
             zIndex: '1',
           }}

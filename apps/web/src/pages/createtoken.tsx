@@ -1,10 +1,41 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Radio from './Radio';
 import Dropdown2 from './Dropdown2';
-import Dropdown from './Dropdown';
+import {  useMemo } from 'react'
+import {
+  Text,
+  Farm as FarmUI,
+  SearchInput,
+  Select
+
+} from '@pancakeswap/uikit'
+import styled from 'styled-components'
+import { useRouter } from 'next/router'
+
+
+
+
+
+const LabelWrapper = styled.div`
+  > ${Text} {
+    font-size: 12px;
+  }
+`
+
+const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setQuery(event.target.value)
+}
 
 const MultiStepForm = () => {
+
+  const handleSortOptionChange = (option: OptionProps): void => {
+    setSortOption(option.value)
+  }
+  const { pathname, query: urlQuery } = useRouter()
+  const [_query, setQuery] = useState('')
+  const normalizedUrlSearch = useMemo(() => (typeof urlQuery?.search === 'string' ? urlQuery.search : ''), [urlQuery])
+  const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
+
   return (
 
     <div>
@@ -23,26 +54,65 @@ const MultiStepForm = () => {
     </Head>
       <div style={{marginTop:"50px"}} className="container">
       <div   className="form-group">
-                    <label style={{ marginBottom:"15px"}} className="control-label">Token Type</label>
+      
                    
   <div>
- <Dropdown2/>
+  <LabelWrapper>
+              <Select
+                options={[
+                  {
+                    label: ('Standard Token'),
+                    value: 'Standard Token',
+                  },
+                  {
+                    label: ('Liquidity Generator Token'),
+                    value: 'Liquidity Generator Token',
+                  },
+                  {
+                    label: ('Baby Token'),
+                    value: 'Baby Token',
+                  },
+                  {
+                    label: ('Buyback Baby Token'),
+                    value: 'Buyback Baby Token',
+                  },
+                 
+                ]}
+                // onOptionChange={handleSortOptionChange}
+              />
+            </LabelWrapper>
  </div>
  <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Name</label>
-                    <input  type="text" className="form-control" placeholder="Name" />
+ <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Name
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Name" />
+            </LabelWrapper>
                 </div>
                 <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Symbol</label>
-                    <input  type="text" className="form-control" placeholder="Symbol" />
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Symbol
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Symbol" />
+            </LabelWrapper>
                 </div>
                 <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Decimals</label>
-                    <input  type="text" className="form-control" placeholder="Decimals" />
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Decimals
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Decimals" />
+            </LabelWrapper>
                 </div>
                 <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
-                    <label style={{ marginBottom:"15px",marginTop:"15px",}}  className="control-label">Total supply</label>
-                    <input  type="text" className="form-control" placeholder="Total supply" />
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Total Supply
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Total Supply" />
+            </LabelWrapper>
                 </div>
              
  </div>

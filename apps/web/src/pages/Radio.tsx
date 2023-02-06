@@ -54,6 +54,7 @@ function ExampleForm() {
             
             
             padding:"10px",
+            color:"#7c6cac"
            
           }}>
         Enable
@@ -103,7 +104,7 @@ function ExampleForm() {
             
             
             padding:"10px",
-           
+            color:"#7c6cac"
           }}>
         Disable
         </span>
