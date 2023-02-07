@@ -14,7 +14,6 @@ import {
   Text,
   Farm as FarmUI,
   SearchInput,
-  SearchInput2,
   Select,
   Checkbox,
    Flex,
