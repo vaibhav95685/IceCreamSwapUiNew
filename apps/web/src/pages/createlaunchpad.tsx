@@ -4,15 +4,22 @@ import Radio from './Radio';
 import Dropdown from './Dropdown';
 import Dropdown1 from './Dropdown1';
 import { AppBody } from 'components/App'
-import {  useMemo } from 'react'
+import {  useMemo } from 'react';
+import {
+  AtomBox
+  
+  } from '@pancakeswap/ui';
+  import Divider from 'views/Farms/components/Divider'
 import {
   Text,
   Farm as FarmUI,
   SearchInput,
+  SearchInput2,
   Select,
   Checkbox,
    Flex,
-   PageHeader
+   PageHeader,
+   Heading
 
 } from '@pancakeswap/uikit'
 import styled from 'styled-components'
@@ -78,12 +85,12 @@ const Step1 = ({ handleNextStep }) => (
 <PageHeader>
 <AppBody>
     <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
-     <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
-     Step 1 - Verify Token
-                  </Text>
-     <Text marginTop={"15px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+    <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+     <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 1 - Verify Token</Heading>
+     <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
      Enter the token address and verify
                   </Text>
+                  </AtomBox>
     <div   className="row setup-content" id="step-1">
         <div   className="col-xs-8">
             <div   className="col-md-8">
@@ -136,7 +143,7 @@ const Step1 = ({ handleNextStep }) => (
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
                   <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Auto Listing</label><br/>
                   </div>
-                  <div style={{marginTop:"4px", marginBottom:"4px"}}>
+                  <div style={{marginTop:"4px", marginBottom:"25px"}}>
                   <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }}  type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
                   <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Manual Listing</label><br/>
                  
@@ -145,6 +152,7 @@ const Step1 = ({ handleNextStep }) => (
             </div>
         </div>
     </div>
+    <Divider margin="0px" />
     <div style={{marginTop:"30px"}}>
     <button  onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
     </div>
@@ -159,17 +167,17 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
     <AppBody>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
-     <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
-     Step 2 - DeFi Launchpad Info
+  <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 2 - DeFi Launchpad Info</Heading>
+     <Text textAlign={"center"} marginBottom={"2px"} color="textSubtle" fontSize="17px">
+     Enter the launchpad information that you want to raise , that should be enter all details about your presale
                   </Text>
-    <Text marginTop={"15px"} marginBottom={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
-    Enter the launchpad information that you want to raise , that should be enter all details about your presale
-                  </Text>
+    </AtomBox>
     <div   className="row setup-content" id="step-2">
         <div >
             <div     >
                 <div      >
-                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                <Text marginBottom={"10px"} marginTop={"25px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Presale rate
                   </Text>
                     <LabelWrapper>
@@ -184,7 +192,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                     
     <Radio/>
 
-<div style={{display:"flex", flexDirection:"row"}} >
+<div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
                <div style={{ marginBottom:"15px", marginTop:"15px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Softcap (BNB)
@@ -205,7 +213,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
  </div>
 
- <div style={{display:"flex", flexDirection:"row"}} >
+ <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
                <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Minimum Buy (BNB)
@@ -227,13 +235,13 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
 
 
- <div style={{display:"flex", flexDirection:"row"}} >
+ <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
                <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Refund Type
                   </Text>
                     <LabelWrapper>
-              <Select
+              <Select 
                 options={[
                   {
                     label: ('Refund'),
@@ -252,7 +260,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                 </div>
                 <div style={{ marginBottom:"15px", marginTop:"5px", marginLeft:"55px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Liquidity %
+                    Liquidity
                   </Text>
                     <LabelWrapper>
               <SearchInput  placeholder="Liquidity %" />
@@ -261,13 +269,13 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                 
 
  </div>
- <div style={{display:"flex", flexDirection:"row"}} >
+ <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
  <div style={{ marginBottom:"15px",marginTop:"5px"}}      >
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Router
                   </Text>
                     <LabelWrapper>
-              <Select
+              <Select 
                 options={[
                   {
                     label: ('Pancakeswap'),
@@ -290,7 +298,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
                 <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Listing rate
+                    Listing
                   </Text>
                     <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Listing rate" />
@@ -301,7 +309,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
  Select start time & end time (UTC)
                   </Text>
- <div style={{display:"flex", flexDirection:"row"}} >
+ <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
   
                <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
               
@@ -338,12 +346,12 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                     </Text>
                   </Flex>
                   
- <div style={{display:"flex", flexDirection:"row", marginTop:"10px"}} >
+ <div style={{display:"flex", flexDirection:"row", marginTop:"10px", justifyContent:"space-between"}} >
   
                <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
               
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-               TGE Date (UTC time)*
+               TGE Date
                   </Text>
                     <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
@@ -361,7 +369,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
  </div>
 
- <div style={{display:"flex", flexDirection:"row"}} >
+ <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
   
   <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
@@ -375,7 +383,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
    <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-   Cycle Release Percent*
+   Cycle Release
      </Text>
        <LabelWrapper>
  <SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
@@ -396,12 +404,12 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                       Use vesting ?
                     </Text>
                   </Flex>
-<div style={{display:"flex", flexDirection:"row", marginTop:"10px"}} >
+<div style={{display:"flex", flexDirection:"row", marginTop:"10px", justifyContent:"space-between"}} >
   
   <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-  TGE Date (UTC time)*
+  TGE Date
      </Text>
        <LabelWrapper>
  <SearchInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
@@ -419,7 +427,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
 </div>
 
-<div style={{display:"flex", flexDirection:"row"}} >
+<div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
 
 <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
 
@@ -431,9 +439,9 @@ Cycle (days)*
 </LabelWrapper>
 </div>
 
-<div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+<div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-Cycle Release Percent*
+Cycle Release
 </Text>
 <LabelWrapper>
 <SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
@@ -446,6 +454,7 @@ Cycle Release Percent*
             </div>
         </div>
     </div>
+    <Divider margin="0px" />
     <div style={{display:"flex", justifyContent:"space-between"}}>
     <div style={{marginTop:"30px",marginLeft:"12px"}}>
     <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
@@ -463,20 +472,20 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
     <AppBody>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
-     <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
-     Step 3 - Add Additional Info
+  <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 3 - Add Additional Info</Heading>
+     <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
+     Let people know who you are
                   </Text>
-    
-    <Text marginBottom={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
-    Let people know who you are
-                  </Text>
+                  </AtomBox>
+
 
     <div   className="row setup-content" id="step-3">
         <div      >
             <div     >
             <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div style={{ marginBottom:"15px", marginTop:"25px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Logo URL
@@ -486,7 +495,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div style={{ marginBottom:"15px",marginTop:"25px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Website
                   </Text>
@@ -594,13 +603,15 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Description
                   </Text>
-                    <LabelWrapper>
+                    <LabelWrapper style={{marginBottom:"25px"}}>
               <SearchInput onChange={handleChangeQuery} placeholder="Description" />
             </LabelWrapper>
                 </div>
             </div>
         </div>
     </div>
+
+    <Divider margin="0px" />
     <div style={{display:"flex", justifyContent:"space-between"}}>
     <div style={{marginTop:"30px",marginLeft:"12px"}}>
     <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
@@ -618,17 +629,18 @@ const Step4 = ({ handlePrevStep }) => (
   <PageHeader>
     <AppBody>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
-         <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
-         Step 4 - Finish
+  <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 4 - Finish</Heading>
+     <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
+     Review your information
                   </Text>
-    <Text marginBottom={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
-    Review your information
-                  </Text>
+        </AtomBox>
+        
     <div   className="row setup-content" id="step-4">
         <div      >
             <div     >
                
-                <div style={{marginTop:"20px", display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div style={{marginTop:"25px", display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Total Tocken</Text>
                      <Text color="textSubtle" fontSize="19px" textAlign="left">530,875 TN</Text>
                 </div>
@@ -700,13 +712,15 @@ const Step4 = ({ handlePrevStep }) => (
                      <Text color="textSubtle" fontSize="19px" textAlign="left">website</Text>
                      <h2 style={{color:'#f8567f'}}>www.google.com</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between",marginBottom:"25px" }}    >
                      <Text color="textSubtle" fontSize="19px" textAlign="left" style={{color:'#f8567f'}}>Description</Text>
                      <h2 style={{color:'#f8567f'}}>Desc</h2>
                 </div>
             </div>
         </div>
     </div>
+
+    <Divider margin="0px" />
     <div style={{display:"flex", justifyContent:"space-between"}}>
     <div style={{marginTop:"30px",marginLeft:"12px"}}>
     <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Back </button>
