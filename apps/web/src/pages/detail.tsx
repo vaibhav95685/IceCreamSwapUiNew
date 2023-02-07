@@ -90,7 +90,7 @@ const MultiStepForm = () => {
                                  
                                   <div style={{marginTop:"20px", display:"flex", flexDirection: "row",justifyContent: "space-between", borderBottom:"1px" }}    >
                                        <Text color="textSubtle" fontSize="15px" textAlign="left">Presale Address</Text>
-                                       <Text color="textSubtle" fontSize="15px" textAlign="left">0x31BoD1234555655544addsdffd7665666ffgggF2</Text>
+                                       <Text color="textSubtle" fontSize="15px" textAlign="left">0x31BoD123455gF2</Text>
                                   </div>
                                   <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
                                        <Text color="textSubtle" fontSize="15px" textAlign="left">Tocken Name</Text>
