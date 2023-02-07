@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Dropdown2 from './Dropdown2';
+import { AppBody } from 'components/App'
 
 import {  useMemo } from 'react'
 import {
@@ -38,16 +39,20 @@ const MultiStepForm = () => {
 
   return (
 <PageHeader>
+<AppBody>
     <div>
           <Head>
 
     </Head>
-      <div style={{marginTop:"50px", marginLeft:"auto", marginRight:"auto", width:"70%"}} >
+    
+      <div style={{marginTop:"50px", marginLeft:"auto", marginRight:"auto", width:"85%"}} >
       <div     >
       
                    
   <div>
-  
+  <Text fontWeight={900} marginBottom={"25px"} color="textSubtle" fontSize="28px" >
+   Create Token
+                  </Text>
         
   <LabelWrapper>
               <Select
@@ -113,13 +118,14 @@ const MultiStepForm = () => {
  </div>
 
 
- <div style={{marginTop:"30px"}}>
+ <div style={{marginTop:"30px",paddingBottom:"100px"}}>
     <button style={{ fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.8em', borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-left" >Create Token</button>
     </div>
 
 
       </div>
     </div>
+    </AppBody>
     </PageHeader>
   );
 };
