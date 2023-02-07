@@ -2,20 +2,24 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Dropdown2 from './Dropdown2';
 import { AppBody } from 'components/App'
+import {
+AtomBox
 
+} from '@pancakeswap/ui';
 import {  useMemo } from 'react'
 import {
   Text,
   Farm as FarmUI,
   SearchInput,
   Select,
-  PageHeader
+  PageHeader,
+  Heading
 
 } from '@pancakeswap/uikit'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 
-
+import Divider from 'views/Farms/components/Divider'
 
 
 
@@ -50,11 +54,13 @@ const MultiStepForm = () => {
       
                    
   <div>
-  <Text fontWeight={900} marginBottom={"25px"} color="textSubtle" fontSize="28px" >
-   Create Token
-                  </Text>
-        
-  <LabelWrapper>
+  <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Create Token</Heading>
+  <Text textAlign={"center"}  color="textSubtle" fontSize="17px">
+     You can create the token from here !
+                  </Text>   
+              </AtomBox>
+  <LabelWrapper style={{marginTop:"20px"}}>
               <Select
                 options={[
                   {
@@ -106,7 +112,7 @@ const MultiStepForm = () => {
               <SearchInput onChange={handleChangeQuery} placeholder="Decimals" />
             </LabelWrapper>
                 </div>
-                <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
+                <div style={{ marginBottom:"25px", marginTop:"15px"}}    >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Total Supply
                   </Text>
@@ -117,7 +123,7 @@ const MultiStepForm = () => {
              
  </div>
 
-
+ <Divider margin="0px" />
  <div style={{marginTop:"30px",paddingBottom:"100px"}}>
     <button style={{ fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.8em', borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-left" >Create Token</button>
     </div>
