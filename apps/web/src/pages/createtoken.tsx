@@ -28,9 +28,7 @@ const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
 
 const MultiStepForm = () => {
 
-  const handleSortOptionChange = (option: OptionProps): void => {
-    setSortOption(option.value)
-  }
+
   const { pathname, query: urlQuery } = useRouter()
   const [_query, setQuery] = useState('')
   const normalizedUrlSearch = useMemo(() => (typeof urlQuery?.search === 'string' ? urlQuery.search : ''), [urlQuery])
@@ -41,22 +39,13 @@ const MultiStepForm = () => {
     <div>
           <Head>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</link>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-</link>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-   
     </Head>
-      <div style={{marginTop:"50px"}} className="container">
-      <div   className="form-group">
+      <div style={{marginTop:"50px", marginLeft:"auto", marginRight:"auto", width:"70%"}} >
+      <div     >
       
                    
   <div>
+    
   <LabelWrapper>
               <Select
                 options={[
@@ -82,7 +71,7 @@ const MultiStepForm = () => {
               />
             </LabelWrapper>
  </div>
- <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+ <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Name
                   </Text>
@@ -90,7 +79,7 @@ const MultiStepForm = () => {
               <SearchInput onChange={handleChangeQuery} placeholder="Name" />
             </LabelWrapper>
                 </div>
-                <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+                <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Symbol
                   </Text>
@@ -98,15 +87,16 @@ const MultiStepForm = () => {
               <SearchInput onChange={handleChangeQuery} placeholder="Symbol" />
             </LabelWrapper>
                 </div>
-                <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+                <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Decimals
                   </Text>
+                
                     <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Decimals" />
             </LabelWrapper>
                 </div>
-                <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+                <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Total Supply
                   </Text>
@@ -119,7 +109,7 @@ const MultiStepForm = () => {
 
 
  <div style={{marginTop:"30px"}}>
-    <button style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-left" >Create Token</button>
+    <button style={{ fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.8em', borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-left" >Create Token</button>
     </div>
 
 

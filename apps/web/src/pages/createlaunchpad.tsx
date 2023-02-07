@@ -51,16 +51,6 @@ const MultiStepForm = () => {
 
     <div>
           <Head>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</link>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-</link>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
    
     </Head>
       <div className="steps">
@@ -84,7 +74,7 @@ const MultiStepForm = () => {
 
 const Step1 = ({ handleNextStep }) => (
 
-  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 1 - Verify Token
                   </Text>
@@ -94,7 +84,7 @@ const Step1 = ({ handleNextStep }) => (
     <div   className="row setup-content" id="step-1">
         <div   className="col-xs-8">
             <div   className="col-md-8">
-            <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+            <div style={{ marginBottom:"15px", marginTop:"15px"}}     >
             <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Token Address
                   </Text>
@@ -153,7 +143,7 @@ const Step1 = ({ handleNextStep }) => (
         </div>
     </div>
     <div style={{marginTop:"30px"}}>
-    <button  onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
+    <button  onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
     </div>
   </div>
 
@@ -161,7 +151,7 @@ const Step1 = ({ handleNextStep }) => (
 );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
-  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 2 - DeFi Launchpad Info
                   </Text>
@@ -169,9 +159,9 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
     Enter the launchpad information that you want to raise , that should be enter all details about your presale
                   </Text>
     <div   className="row setup-content" id="step-2">
-        <div   className="col-xs-12">
-            <div   className="col-md-12">
-                <div   className="form-group">
+        <div >
+            <div     >
+                <div      >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Presale rate
                   </Text>
@@ -179,7 +169,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
               <SearchInput onChange={handleChangeQuery} placeholder="Presale rate" />
             </LabelWrapper>
                 </div>
-                <div   className="form-group">
+                <div      >
                 <Text color="textSubtle" fontSize="17px" textAlign="left">
                     Whitelist
                   </Text>
@@ -188,7 +178,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
     <Radio/>
 
 <div style={{display:"flex", flexDirection:"row"}} >
-               <div style={{ marginBottom:"15px", marginTop:"15px"}}  className="form-group">
+               <div style={{ marginBottom:"15px", marginTop:"15px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Softcap (BNB)
                   </Text>
@@ -197,7 +187,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"15px",marginLeft:"55px"}}   className="form-group">
+                <div style={{ marginBottom:"15px",marginTop:"15px",marginLeft:"55px"}}      >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Hardcap (BNB)
                   </Text>
@@ -209,7 +199,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
  </div>
 
  <div style={{display:"flex", flexDirection:"row"}} >
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Minimum Buy (BNB)
                   </Text>
@@ -218,7 +208,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Maximum Buy (BNB)                  </Text>
                     <LabelWrapper>
@@ -231,7 +221,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
 
  <div style={{display:"flex", flexDirection:"row"}} >
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Refund Type
                   </Text>
@@ -253,8 +243,19 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
               />
             </LabelWrapper>
                 </div>
+                <div style={{ marginBottom:"15px", marginTop:"5px", marginLeft:"55px"}}     >
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                    Liquidity %
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Liquidity %" />
+            </LabelWrapper>
+                </div>
+                
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"110px"}}   className="form-group">
+ </div>
+ <div style={{display:"flex", flexDirection:"row"}} >
+ <div style={{ marginBottom:"15px",marginTop:"5px"}}      >
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Router
                   </Text>
@@ -277,18 +278,10 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
- </div>
- <div style={{display:"flex", flexDirection:"row"}} >
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
-               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Liquidity %
-                  </Text>
-                    <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder="Liquidity %" />
-            </LabelWrapper>
-                </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+             
+
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Listing rate
                   </Text>
@@ -303,7 +296,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                   </Text>
  <div style={{display:"flex", flexDirection:"row"}} >
   
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
               
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                   Start time (UTC)
@@ -313,7 +306,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                    End time (UTC)
                   </Text>
@@ -323,6 +316,10 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                 </div>
 
  </div>
+
+ <Text marginBottom={"5px"} marginTop={"20px"} color="textSubtle" fontSize="17px" textAlign="left">
+              For Teams Token
+              </Text>
  <Flex alignItems="center">
                     <Checkbox
                       name="own-address"
@@ -333,9 +330,10 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                       Use vesting ?
                     </Text>
                   </Flex>
+                  
  <div style={{display:"flex", flexDirection:"row", marginTop:"10px"}} >
   
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
               
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                TGE Date (UTC time)*
@@ -345,7 +343,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                 TGE Percent
                   </Text>
@@ -358,7 +356,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
  <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
   Cycle (days)*
@@ -368,7 +366,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
    Cycle Release Percent*
      </Text>
@@ -378,9 +376,22 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
    </div>
 
 </div>
+<Text marginBottom={"5px"} marginTop={"20px"} color="textSubtle" fontSize="17px" textAlign="left">
+              For Investor
+              </Text>
+              <Flex alignItems="center">
+                    <Checkbox
+                      name="own-address"
+                      type="checkbox"
+                      scale="sm"
+                    />
+                    <Text ml="10px" style={{ userSelect: 'none' }}>
+                      Use vesting ?
+                    </Text>
+                  </Flex>
 <div style={{display:"flex", flexDirection:"row", marginTop:"10px"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
   TGE Date (UTC time)*
@@ -390,7 +401,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
    TGE Percent
      </Text>
@@ -403,7 +414,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
 <div style={{display:"flex", flexDirection:"row"}} >
 
-<div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+<div style={{ marginBottom:"15px", marginTop:"5px"}}     >
 
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
 Cycle (days)*
@@ -413,7 +424,7 @@ Cycle (days)*
 </LabelWrapper>
 </div>
 
-<div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+<div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
 Cycle Release Percent*
 </Text>
@@ -428,17 +439,19 @@ Cycle Release Percent*
             </div>
         </div>
     </div>
+    <div style={{display:"flex", justifyContent:"space-between"}}>
     <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
+    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
     </div>
     <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
+    <button onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
+    </div>
     </div>
   </div>
 );
 
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
-  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 3 - Add Additional Info
                   </Text>
@@ -448,11 +461,11 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
                   </Text>
 
     <div   className="row setup-content" id="step-3">
-        <div   className="col-xs-12">
-            <div   className="col-md-12">
+        <div      >
+            <div     >
             <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Logo URL
@@ -462,7 +475,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Website
                   </Text>
@@ -475,7 +488,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 
 <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Facebook
@@ -485,7 +498,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Twitter
                   </Text>
@@ -498,7 +511,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 
 <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Github
@@ -508,7 +521,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Telegram
                   </Text>
@@ -522,7 +535,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 
 <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Instagram
@@ -532,7 +545,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Discord
                   </Text>
@@ -546,7 +559,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 
 <div style={{display:"flex", flexDirection:"row"}} >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}  className="form-group">
+  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Reddit
@@ -556,7 +569,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}   className="form-group">
+   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Youtube
                   </Text>
@@ -566,7 +579,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
    </div>
 
 </div>
-<div   className="form-group">
+<div      >
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Description
                   </Text>
@@ -577,17 +590,19 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </div>
         </div>
     </div>
+    <div style={{display:"flex", justifyContent:"space-between"}}>
     <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
+    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
     </div>
      <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button onClick={handleNextStep} style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="nextBtn btn-lg pull-right" > Next </button>
+    <button onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
+ </div>
  </div>
   </div>
 );
 
 const Step4 = ({ handlePrevStep }) => (
-  <div style={{paddingTop:"50px", paddingBottom:"100px"}} className='container'>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"75%"}}  >
          <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
          Step 4 - Finish
                   </Text>
@@ -595,93 +610,95 @@ const Step4 = ({ handlePrevStep }) => (
     Review your information
                   </Text>
     <div   className="row setup-content" id="step-4">
-        <div   className="col-xs-12">
-            <div   className="col-md-12">
+        <div      >
+            <div     >
                
-                <div style={{marginTop:"20px", display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Total Tocken</h2>
-                     <h2>530,875 TN</h2>
+                <div style={{marginTop:"20px", display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Total Tocken</Text>
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">530,875 TN</Text>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Factory Address</h2>
-                     <h2 style={{color:'#f8567f'}}>Dx28xxxxxxxxxxxxxxB71D3dO36bxxxxxxd5</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Factory Address</Text>
+                     <h2 style={{color:'#f8567f'}}>Dx28x71D3dO36bxxxd5</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Tocken name</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken name</Text>
                      <h2 style={{color:'#f8567f'}}>Test</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Tocken Symbol</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken Symbol</Text>
                      <h2 style={{color:'#f8567f'}}>TN</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Tocken Decimal</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken Decimal</Text>
                      <h2 style={{color:'#f8567f'}}>18</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Presale rate</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Presale rate</Text>
                      <h2 style={{color:'#f8567f'}}>10 TN</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Listing rate</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Listing rate</Text>
                      <h2 style={{color:'#f8567f'}}>1 TN</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Sale method</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Sale method</Text>
                      <h2 style={{color:'#f8567f'}}>Public</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Softcap</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Softcap</Text>
                      <h2 style={{color:'#f8567f'}}>25000 BNB</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Hardcap</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Hardcap</Text>
                      <h2 style={{color:'#f8567f'}}>50000 BNB</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Unsold Tokek</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Unsold Tokek</Text>
                      <h2 style={{color:'#f8567f'}}>Retund</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Minimum Buy</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Minimum Buy</Text>
                      <h2 style={{color:'#f8567f'}}>0,1BNB</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Msximum Buy</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Msximum Buy</Text>
                      <h2 style={{color:'#f8567f'}}>1000000</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Liquidity</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Liquidity</Text>
                      <h2 style={{color:'#f8567f'}}>65%</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Stsrt time</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Stsrt time</Text>
                      <h2 style={{color:'#f8567f'}}>2023-01-28T08.00(UTC)</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>End time</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">End time</Text>
                      <h2 style={{color:'#f8567f'}}>2023-01-31T08.00(UTC)</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>Liquidity lockup time</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Liquidity lockup time</Text>
                      <h2 style={{color:'#f8567f'}}>10 min</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2>webdite</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">webdite</Text>
                      <h2 style={{color:'#f8567f'}}>https:/icecreamswap.com/?chainld=32520</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }} className="form-group">
-                     <h2 style={{color:'#f8567f'}}>Description</h2>
+                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left" style={{color:'#f8567f'}}>Description</Text>
                      <h2 style={{color:'#f8567f'}}>Hello</h2>
                 </div>
             </div>
         </div>
     </div>
+    <div style={{display:"flex", justifyContent:"space-between"}}>
     <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ backgroundColor: '#ccc', color: '#000', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-left" > Back </button>
+    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Back </button>
   </div>
   <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button style={{ backgroundColor: '#f8567f', color: '#fff', padding: '0.5em 1em',  borderRadius: '0.25em',border: 'none' }} className="prevBtn btn-lg pull-right" > Submit </button>
+    <button style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Submit </button>
+    </div>
     </div>
   </div>
   
