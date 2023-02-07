@@ -5,6 +5,11 @@ import FarmCard from 'views/CurrentLaunchpad/components/FarmCard/FarmCard'
 import { getDisplayApr } from 'views/CurrentLaunchpad/components/getDisplayApr'
 import { usePriceCakeBusd } from 'state/farms/hooks'
 import { useWeb3React } from '@pancakeswap/wagmi'
+import {
+
+  PageHeader
+
+} from '@pancakeswap/uikit'
 import ProxyFarmContainer, {
   YieldBoosterStateContext,
 } from 'views/CurrentLaunchpad/components/YieldBooster/components/ProxyFarmContainer'
@@ -17,6 +22,7 @@ const ProxyFarmCardContainer = ({ farm }) => {
   const finalFarm = shouldUseProxyFarm ? proxyFarm : farm
 
   return (
+   
     <FarmCard
       key={finalFarm.pid}
       farm={finalFarm}
@@ -25,6 +31,7 @@ const ProxyFarmCardContainer = ({ farm }) => {
       account={account}
       removed={false}
     />
+    
   )
 }
 
@@ -34,6 +41,7 @@ const FarmsPage = () => {
   const cakePrice = usePriceCakeBusd()
   return (
     <>
+    
       {chosenFarmsMemoized.map((farm) =>
         farm.boosted ? (
           <ProxyFarmContainer farm={farm} key={farm.pid}>

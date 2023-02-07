@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Dropdown2 from './Dropdown2';
+
 import {  useMemo } from 'react'
 import {
   Text,
   Farm as FarmUI,
   SearchInput,
-  Select
+  Select,
+  PageHeader
 
 } from '@pancakeswap/uikit'
 import styled from 'styled-components'
@@ -35,7 +37,7 @@ const MultiStepForm = () => {
   const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
 
   return (
-
+<PageHeader>
     <div>
           <Head>
 
@@ -45,7 +47,8 @@ const MultiStepForm = () => {
       
                    
   <div>
-    
+  
+        
   <LabelWrapper>
               <Select
                 options={[
@@ -70,6 +73,8 @@ const MultiStepForm = () => {
                 // onOptionChange={handleSortOptionChange}
               />
             </LabelWrapper>
+            
+      
  </div>
  <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
@@ -115,6 +120,7 @@ const MultiStepForm = () => {
 
       </div>
     </div>
+    </PageHeader>
   );
 };
 
