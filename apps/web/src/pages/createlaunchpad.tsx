@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Radio from './Radio';
 import Dropdown from './Dropdown';
 import Dropdown1 from './Dropdown1';
+import { AppBody } from 'components/App'
 import {  useMemo } from 'react'
 import {
   Text,
@@ -75,7 +76,8 @@ const MultiStepForm = () => {
 
 const Step1 = ({ handleNextStep }) => (
 <PageHeader>
-    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
+<AppBody>
+    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 1 - Verify Token
                   </Text>
@@ -147,6 +149,7 @@ const Step1 = ({ handleNextStep }) => (
     <button  onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
     </div>
   </div>
+  </AppBody>
   </PageHeader>
 
 
@@ -154,7 +157,8 @@ const Step1 = ({ handleNextStep }) => (
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
+    <AppBody>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 2 - DeFi Launchpad Info
                   </Text>
@@ -251,7 +255,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                     Liquidity %
                   </Text>
                     <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder="Liquidity %" />
+              <SearchInput  placeholder="Liquidity %" />
             </LabelWrapper>
                 </div>
                 
@@ -451,12 +455,14 @@ Cycle Release Percent*
     </div>
     </div>
   </div>
+  </AppBody>
   </PageHeader>
 );
 
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
+    <AppBody>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 3 - Add Additional Info
                   </Text>
@@ -604,12 +610,14 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
  </div>
  </div>
   </div>
+  </AppBody>
   </PageHeader>
 );
 
 const Step4 = ({ handlePrevStep }) => (
   <PageHeader>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"75%"}}  >
+    <AppBody>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
          <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
          Step 4 - Finish
                   </Text>
@@ -626,7 +634,7 @@ const Step4 = ({ handlePrevStep }) => (
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Factory Address</Text>
-                     <h2 style={{color:'#f8567f'}}>Dx28x71D3dO36bxxxd5</h2>
+                     <h2 style={{color:'#f8567f'}}>Dx28x71D3dO36bxxd5</h2>
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken name</Text>
@@ -690,11 +698,11 @@ const Step4 = ({ handlePrevStep }) => (
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">website</Text>
-                     <h2 style={{color:'#f8567f'}}>https:/icecreamswap.com/?chainld=32520</h2>
+                     <h2 style={{color:'#f8567f'}}>www.google.com</h2>
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
                      <Text color="textSubtle" fontSize="19px" textAlign="left" style={{color:'#f8567f'}}>Description</Text>
-                     <h2 style={{color:'#f8567f'}}>Hello</h2>
+                     <h2 style={{color:'#f8567f'}}>Desc</h2>
                 </div>
             </div>
         </div>
@@ -708,6 +716,7 @@ const Step4 = ({ handlePrevStep }) => (
     </div>
     </div>
   </div>
+  </AppBody>
   </PageHeader>
 );
 
