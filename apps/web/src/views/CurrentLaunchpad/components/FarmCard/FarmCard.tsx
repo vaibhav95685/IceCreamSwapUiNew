@@ -12,7 +12,7 @@ import { FarmWithStakedValue } from '../types'
 import ApyButton from './ApyButton'
 import CardActionsContainer from './CardActionsContainer'
 import CardHeading from './CardHeading'
-
+import Link from "next/link"
 import BoostedApr from '../YieldBooster/components/BoostedApr'
 
 const { DetailsSection } = FarmUI.FarmCard
@@ -172,7 +172,8 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
   <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
 </svg>
 
-          <button type="button" style={{
+<Link href={"/detail"}>      
+   <button type="button" style={{
       backgroundColor: 'pink',
       color: 'white',
       padding: '10px 20px',
@@ -181,6 +182,7 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
     }}>
       View
     </button>
+    </Link>
     </Flex>
         </Flex>
         {/* <CardActionsContainer
