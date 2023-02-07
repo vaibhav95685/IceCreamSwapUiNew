@@ -329,8 +329,9 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
   }
 
   return (
+    
     <FarmsContext.Provider value={{ chosenFarmsMemoized }}>
-      
+    
       <Page>
        
         {isInactive && (
@@ -368,8 +369,10 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
         )}
         {poolLength && <div ref={observerRef} />}
       </Page>
+     
       {createPortal(<ScrollToTopButtonV2 />, document.body)}
     </FarmsContext.Provider>
+    
   )
 }
 

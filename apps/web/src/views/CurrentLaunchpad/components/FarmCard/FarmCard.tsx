@@ -192,8 +192,8 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
         /> */}
       </FarmCardInnerContainer>
 
-      <ExpandingWrapper>
-        <ExpandableSectionButton onClick={toggleExpandableSection} expanded={showExpandableSection} />
+      {/* <ExpandingWrapper>
+        <ExpandableSectionButton onClick={toggleExpandableSection} expanded={showExpandableSection} /> */}
         {/* {showExpandableSection && (
           <DetailsSection
             removed={removed}
@@ -206,7 +206,7 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
             auctionHostingEndDate={farm.auctionHostingEndDate}
           />
         )} */}
-      </ExpandingWrapper>
+      {/* </ExpandingWrapper> */}
     </StyledCard>
   )
 }

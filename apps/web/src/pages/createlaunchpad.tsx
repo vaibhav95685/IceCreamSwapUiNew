@@ -11,6 +11,7 @@ import {
   Select,
   Checkbox,
    Flex,
+   PageHeader
 
 } from '@pancakeswap/uikit'
 import styled from 'styled-components'
@@ -73,8 +74,8 @@ const MultiStepForm = () => {
 };
 
 const Step1 = ({ handleNextStep }) => (
-
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
+<PageHeader>
+    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 1 - Verify Token
                   </Text>
@@ -146,11 +147,13 @@ const Step1 = ({ handleNextStep }) => (
     <button  onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
     </div>
   </div>
+  </PageHeader>
 
 
 );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
+  <PageHeader>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 2 - DeFi Launchpad Info
@@ -448,9 +451,11 @@ Cycle Release Percent*
     </div>
     </div>
   </div>
+  </PageHeader>
 );
 
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
+  <PageHeader>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"70%"}}  >
      <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
      Step 3 - Add Additional Info
@@ -599,9 +604,11 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
  </div>
  </div>
   </div>
+  </PageHeader>
 );
 
 const Step4 = ({ handlePrevStep }) => (
+  <PageHeader>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"75%"}}  >
          <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="28px" textAlign="left">
          Step 4 - Finish
@@ -654,7 +661,7 @@ const Step4 = ({ handlePrevStep }) => (
                      <h2 style={{color:'#f8567f'}}>50000 BNB</h2>
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
-                     <Text color="textSubtle" fontSize="19px" textAlign="left">Unsold Tokek</Text>
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Unsold Token</Text>
                      <h2 style={{color:'#f8567f'}}>Retund</h2>
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
@@ -682,7 +689,7 @@ const Step4 = ({ handlePrevStep }) => (
                      <h2 style={{color:'#f8567f'}}>10 min</h2>
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
-                     <Text color="textSubtle" fontSize="19px" textAlign="left">webdite</Text>
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">website</Text>
                      <h2 style={{color:'#f8567f'}}>https:/icecreamswap.com/?chainld=32520</h2>
                 </div>
                 <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
@@ -701,7 +708,7 @@ const Step4 = ({ handlePrevStep }) => (
     </div>
     </div>
   </div>
-  
+  </PageHeader>
 );
 
 export default MultiStepForm;
