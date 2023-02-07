@@ -14,6 +14,7 @@ import {
   Text,
   Farm as FarmUI,
   SearchInput,
+  DateInput,
   Select,
   Checkbox,
    Flex,
@@ -174,17 +175,18 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
     </AtomBox>
     <div   className="row setup-content" id="step-2">
         <div >
-            <div     >
-                <div      >
-                <Text marginBottom={"10px"} marginTop={"25px"} color="textSubtle" fontSize="17px" textAlign="left">
+            <div >
+                <div >
+                <Text marginBottom={"10px"} marginTop={"20px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Presale rate
                   </Text>
                     <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Presale rate" />
             </LabelWrapper>
                 </div>
-                <div      >
-                <Text color="textSubtle" fontSize="17px" textAlign="left">
+
+                <div >
+                <Text marginTop={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Whitelist
                   </Text>
                     <div>
@@ -353,7 +355,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                TGE Date
                   </Text>
                     <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
+              <DateInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
             </LabelWrapper>
                 </div>
 
@@ -411,7 +413,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
   TGE Date
      </Text>
        <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
+ <DateInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
 </LabelWrapper>
    </div>
 
