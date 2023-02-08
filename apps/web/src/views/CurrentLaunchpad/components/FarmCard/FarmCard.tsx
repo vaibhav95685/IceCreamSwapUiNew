@@ -174,7 +174,7 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
 
 <Link href={"/detail"}>      
    <button type="button" style={{
-      backgroundColor: 'pink',
+      backgroundColor: '#f8567f',
       color: 'white',
       padding: '10px 20px',
       border: 'none',

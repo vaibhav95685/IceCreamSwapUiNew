@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Radio from './Radio';
 import Dropdown from './Dropdown';
 import Dropdown1 from './Dropdown1';
 import {  useMemo } from 'react'
-import { AppBody } from 'components/App'
+import { AppBody } from 'components/App';
+import Divider from 'views/Farms/components/Divider'
 import {
   Text,
   Farm as FarmUI,
@@ -15,8 +17,13 @@ import {
    PageHeader
 
 } from '@pancakeswap/uikit'
+import {
+     AtomBox
+     
+     } from '@pancakeswap/ui';
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+
 
 
 
@@ -49,10 +56,12 @@ const MultiStepForm = () => {
 
                     <PageHeader>
                     <AppBody>                     
-                    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"75%"}}  >
-                           <Text marginTop={"15px"} fontWeight={900} marginBottom={"10px"} color="textSubtle" fontSize="30px" textAlign="left">
+                    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+                    <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+                           <Text marginTop={"5px"} fontWeight={900} marginBottom={"5px"} color="textSubtle" fontSize="30px" textAlign="left">
                            AI District Icecreamswap
                            </Text>
+                           </AtomBox>
                            <div style={{display:"flex" , justifyContent:"flex-end" , }}>
                            
                            {/* <button type="button" style={{
@@ -66,7 +75,7 @@ const MultiStepForm = () => {
                             </button>           */}
 
                            </div>
-                           <div style={{display:"flex" , justifyContent:"flex-start" , marginTop:"-0px", marginBottom:"20px"}}>
+                           <div style={{display:"flex" , justifyContent:"flex-start" , marginTop:"25px", marginBottom:"20px"}}>
                            
                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-telegram" viewBox="0 0 16 16" style={{marginRight:"10px"}}>
                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.153.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.154.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
@@ -176,7 +185,7 @@ const MultiStepForm = () => {
                               
                           </div>
                       </div>
-                      <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
+                      <div style={{ marginBottom:"25px", marginTop:"15px"}}    >
                       <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                       Amount
                       </Text>
@@ -184,9 +193,12 @@ const MultiStepForm = () => {
                       <SearchInput onChange={handleChangeQuery} placeholder="Amount" />
                       </LabelWrapper>
                 </div>
+                <Divider margin="0px" />
                       <div style={{display:"flex", justifyContent:"space-between"}}>
                       <div style={{marginTop:"30px",marginLeft:"12px"}}>
-                      <button  style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Back </button>
+                     <Link href={"/CurrentLaunchpad"}>
+                <button  style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Back </button>
+                </Link>
                       </div>
                       <div style={{marginTop:"30px",marginRight:"12px"}}>
                       <button style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Buy </button>
