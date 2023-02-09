@@ -34,9 +34,6 @@ const LabelWrapper = styled.div`
   }
 `
 
-const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
-  setQuery(event.target.value)
-}
 
 
 const MultiStepForm = () => {
@@ -46,7 +43,10 @@ const MultiStepForm = () => {
   const normalizedUrlSearch = useMemo(() => (typeof urlQuery?.search === 'string' ? urlQuery.search : ''), [urlQuery])
   const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
 
-
+  const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
+     setQuery(event.target.value)
+   }
+   
  
 
   

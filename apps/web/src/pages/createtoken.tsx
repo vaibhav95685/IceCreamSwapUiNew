@@ -17,9 +17,9 @@ import {
 
 } from '@pancakeswap/uikit'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import Divider from 'views/Farms/components/Divider';
 
-import Divider from 'views/Farms/components/Divider'
 
 
 
@@ -29,9 +29,7 @@ const LabelWrapper = styled.div`
   }
 `
 
-const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
-  setQuery(event.target.value)
-}
+
 
 const MultiStepForm = () => {
 
@@ -40,7 +38,10 @@ const MultiStepForm = () => {
   const [_query, setQuery] = useState('')
   const normalizedUrlSearch = useMemo(() => (typeof urlQuery?.search === 'string' ? urlQuery.search : ''), [urlQuery])
   const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
-
+  const [showTooltip, setShowTooltip] = useState(false);
+  const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value)
+  }
   return (
 <PageHeader>
 <AppBody>
@@ -60,6 +61,7 @@ const MultiStepForm = () => {
      You can create the token from here !
                   </Text>   
               </AtomBox>
+             
   <LabelWrapper style={{marginTop:"20px"}}>
               <Select
                 options={[
@@ -93,7 +95,9 @@ const MultiStepForm = () => {
                   </Text>
                     <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Name" />
-            </LabelWrapper>
+       
+
+   </LabelWrapper>
                 </div>
                 <div style={{ marginBottom:"15px", marginTop:"15px"}}    >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">

@@ -5,6 +5,7 @@ import Dropdown from './Dropdown';
 import Dropdown1 from './Dropdown1';
 import { AppBody } from 'components/App'
 import {  useMemo } from 'react';
+import UseVesting from './usevesting';
 import {
   AtomBox
   
@@ -38,8 +39,11 @@ const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
   setQuery(event.target.value)
 }
 
-
 const MultiStepForm = () => {
+
+
+
+ 
 
   const { pathname, query: urlQuery } = useRouter()
   const [_query, setQuery] = useState('')
@@ -48,20 +52,19 @@ const MultiStepForm = () => {
 
 
  
+  
 
   
 
   const [step, setStep] = useState(1);
-
+ 
   const handleNextStep = () => setStep(step + 1);
   const handlePrevStep = () => setStep(step - 1);
 
   return (
 
     <div>
-          <Head>
-   
-    </Head>
+        
       <div className="steps">
        
       </div>
@@ -75,7 +78,10 @@ const MultiStepForm = () => {
         <Step3 handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} />
       )}
       {step === 4 && (
-        <Step4 handlePrevStep={handlePrevStep} />
+        <Step4 handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} />
+      )}
+      {step === 5 && (
+        <Step5 handlePrevStep={handlePrevStep} />
       )}
     </div>
   );
@@ -271,7 +277,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
  </div>
  <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
- <div style={{ marginBottom:"15px",marginTop:"5px"}}      >
+ <div style={{ marginBottom:"25px",marginTop:"5px"}}      >
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Router
                   </Text>
@@ -297,7 +303,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
              
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+                <div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Listing
                   </Text>
@@ -307,149 +313,8 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                 </div>
 
  </div>
- <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
- Select start time & end time (UTC)
-                  </Text>
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
-  
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
-              
-               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                  Start time (UTC)
-                  </Text>
-                    <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder="Start time (UTC)" />
-            </LabelWrapper>
-                </div>
-
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
-                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                   End time (UTC)
-                  </Text>
-                    <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder="End time (UTC)" />
-            </LabelWrapper>
-                </div>
-
- </div>
-
- <Text marginBottom={"5px"} marginTop={"20px"} color="textSubtle" fontSize="17px" textAlign="left">
-              For Teams Token
-              </Text>
- <Flex alignItems="center">
-                    <Checkbox
-                      name="own-address"
-                      type="checkbox"
-                      scale="sm"
-                    />
-                    <Text ml="10px" style={{ userSelect: 'none' }}>
-                      Use vesting ?
-                    </Text>
-                  </Flex>
-                  
- <div style={{display:"flex", flexDirection:"row", marginTop:"10px", justifyContent:"space-between"}} >
-  
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
-              
-               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-               TGE Date
-                  </Text>
-                    <LabelWrapper>
-              <DateInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
-            </LabelWrapper>
-                </div>
-
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
-                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                TGE Percent
-                  </Text>
-                    <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder=" TGE Percent" />
-            </LabelWrapper>
-                </div>
-
- </div>
-
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
-  
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
  
-  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-  Cycle (days)*
-     </Text>
-       <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder=" Cycle (days)*" />
-</LabelWrapper>
-   </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
-   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-   Cycle Release
-     </Text>
-       <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
-</LabelWrapper>
-   </div>
-
-</div>
-<Text marginBottom={"5px"} marginTop={"20px"} color="textSubtle" fontSize="17px" textAlign="left">
-              For Investor
-              </Text>
-              <Flex alignItems="center">
-                    <Checkbox
-                      name="own-address"
-                      type="checkbox"
-                      scale="sm"
-                    />
-                    <Text ml="10px" style={{ userSelect: 'none' }}>
-                      Use vesting ?
-                    </Text>
-                  </Flex>
-<div style={{display:"flex", flexDirection:"row", marginTop:"10px", justifyContent:"space-between"}} >
-  
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
- 
-  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-  TGE Date
-     </Text>
-       <LabelWrapper>
- <DateInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
-</LabelWrapper>
-   </div>
-
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
-   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-   TGE Percent
-     </Text>
-       <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder=" TGE Percent" />
-</LabelWrapper>
-   </div>
-
-</div>
-
-<div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
-
-<div style={{ marginBottom:"15px", marginTop:"5px"}}     >
-
-<Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-Cycle (days)*
-</Text>
-<LabelWrapper>
-<SearchInput onChange={handleChangeQuery} placeholder=" Cycle (days)*" />
-</LabelWrapper>
-</div>
-
-<div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
-<Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-Cycle Release
-</Text>
-<LabelWrapper>
-<SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
-</LabelWrapper>
-</div>
-
-</div>
   </div>
                 </div>
             </div>
@@ -474,7 +339,60 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
     <AppBody>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
   <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 3 - Add Additional Info</Heading>
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 3 - Additional DeFi Launchpad Info</Heading>
+     <Text textAlign={"center"} marginBottom={"2px"} color="textSubtle" fontSize="17px">
+     Enter the launchpad information that you want to raise , that should be enter all details about your presale
+                  </Text>
+    </AtomBox>
+    <Text  marginTop={"25px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+ Select start time & end time (UTC)
+                  </Text>
+ <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
+  
+               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+              
+               <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                  Start time (UTC)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="Start time (UTC)" />
+            </LabelWrapper>
+                </div>
+
+                <div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
+                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                   End time (UTC)
+                  </Text>
+                    <LabelWrapper>
+              <SearchInput onChange={handleChangeQuery} placeholder="End time (UTC)" />
+            </LabelWrapper>
+                </div>
+
+ </div>
+    <div>
+     <UseVesting/>
+    </div>
+
+    <Divider margin="0px" />
+    <div style={{display:"flex", justifyContent:"space-between"}}>
+    <div style={{marginTop:"30px",marginLeft:"12px"}}>
+    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
+    </div>
+    <div style={{marginTop:"30px",marginRight:"12px"}}>
+    <button onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
+    </div>
+    </div>
+  </div>
+  </AppBody>
+  </PageHeader>
+);
+
+const Step4 = ({ handleNextStep, handlePrevStep }) => (
+  <PageHeader>
+    <AppBody>
+  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+  <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 4 - Add Additional Info</Heading>
      <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
      Let people know who you are
                   </Text>
@@ -626,12 +544,12 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
   </PageHeader>
 );
 
-const Step4 = ({ handlePrevStep }) => (
+const Step5 = ({ handlePrevStep }) => (
   <PageHeader>
     <AppBody>
   <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
   <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 4 - Finish</Heading>
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 5 - Finish</Heading>
      <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
      Review your information
                   </Text>
