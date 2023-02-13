@@ -1,0 +1,70 @@
+.maincontainer{
+padding-top: 50x;
+padding-bottom: 100px;
+margin-left: auto;
+margin-right: auto;
+width: 85%;
+}
+
+.step2row1{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.step2row1left{
+
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.step2row1right{
+
+margin-bottom: 15px;
+margin-top: 15px;
+
+}
+.step2row1right2{
+
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 55px;
+    
+ }
+  
+
+.bottomdiv{
+   margin-top: 30px;
+   margin-left: 12px;
+}
+
+.bottomgreybutton{
+  width: 85px;
+  font-size: 16px;
+  background-color: #ccc;
+  color: #000;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  border: none;
+
+
+}
+
+.bottompinkbutton{
+    width: 85px;
+    font-size: 16px;
+    background-color: #f8567f;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    border: none;
+
+}
+
+
+.maincontainer2{
+    display: flex;
+    flex-direction: row;
+
+}

@@ -98,7 +98,7 @@ const Step1 = ({ handleNextStep }) => (
     <div id="step-1">
         <div>
             <div>
-            <div className='tokenaddress'>
+            <div >
             <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Token Address
                   </Text>
@@ -170,14 +170,14 @@ const Step1 = ({ handleNextStep }) => (
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
     <AppBody>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+  <div className='maincontainer'>
   <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 2 - DeFi Launchpad Info</Heading>
-     <Text textAlign={"center"} marginBottom={"2px"} color="textSubtle" fontSize="17px">
+  <Heading textAlign={"center"} as="h2"> Step 2 - DeFi Launchpad Info</Heading>
+     <Text textAlign={"center"} color="textSubtle" fontSize="17px">
      Enter the launchpad information that you want to raise , that should be enter all details about your presale
                   </Text>
     </AtomBox>
-    <div   className="row setup-content" id="step-2">
+    <div id="step-2">
         <div >
             <div >
                 <div >
@@ -192,15 +192,15 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                 </div>
 
                 <div >
-                <Text marginTop={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                <Text marginTop={"15px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Whitelist
                   </Text>
                     <div>
                     
     <Radio/>
 
-<div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
-               <div style={{ marginBottom:"15px", marginTop:"15px"}}     >
+<div className='step2row1' >
+               <div className='step2row1left'  >
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Softcap (BNB)
                   </Text>
@@ -209,7 +209,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"15px",marginLeft:"55px"}}      >
+                <div className='step2row1right'>
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Hardcap (BNB)
                   </Text>
@@ -220,8 +220,8 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
  </div>
 
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+ <div className='step2row1' >
+               <div className='step2row1left'>
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Minimum Buy (BNB)
                   </Text>
@@ -230,7 +230,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+                <div className='step2row1right'>
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Maximum Buy (BNB)                  </Text>
                     <LabelWrapper>
@@ -242,8 +242,8 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
 
 
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+ <div className='step2row1'>
+               <div className='step2row1left'>
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Refund Type
                   </Text>
@@ -265,7 +265,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
               />
             </LabelWrapper>
                 </div>
-                <div style={{ marginBottom:"15px", marginTop:"5px", marginLeft:"55px"}}     >
+                <div className='step2row1right'>
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Liquidity
                   </Text>
@@ -276,8 +276,8 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                 
 
  </div>
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
- <div style={{ marginBottom:"25px",marginTop:"5px"}}      >
+ <div className='step2row1'>
+ <div className='step2row1left'>
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Router
                   </Text>
@@ -303,7 +303,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 
              
 
-                <div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
+                <div className='step2row1right'>
                 <Text marginLeft={"5px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Listing
                   </Text>
@@ -321,12 +321,12 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
         </div>
     </div>
     <Divider margin="0px" />
-    <div style={{display:"flex", justifyContent:"space-between"}}>
-    <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
+    <div className='step2row1'>
+    <div className='bottomdiv'>
+    <button onClick={handlePrevStep} className="bottomgreybutton"> Back </button>
     </div>
-    <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
+    <div className='bottomdiv'>
+    <button onClick={handleNextStep} className="bottompinkbutton"> Next </button>
     </div>
     </div>
   </div>
@@ -337,19 +337,19 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
 const Step3 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
     <AppBody>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+  <div className='maincontainer'>
   <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 3 - Additional DeFi Launchpad Info</Heading>
-     <Text textAlign={"center"} marginBottom={"2px"} color="textSubtle" fontSize="17px">
+  <Heading   textAlign={"center"} as="h2"> Step 3 - Additional DeFi Launchpad Info</Heading>
+     <Text textAlign={"center"} color="textSubtle" fontSize="17px">
      Enter the launchpad information that you want to raise , that should be enter all details about your presale
                   </Text>
     </AtomBox>
     <Text  marginTop={"25px"} marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
  Select start time & end time (UTC)
                   </Text>
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
+ <div className='step2row1'>
   
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+               <div className='step2row1left'>
               
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                   Start time (UTC)
@@ -359,7 +359,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
+                <div className='step2row1right'>
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                    End time (UTC)
                   </Text>
@@ -374,12 +374,12 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
     </div>
 
     <Divider margin="0px" />
-    <div style={{display:"flex", justifyContent:"space-between"}}>
-    <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
+    <div className='step2row1'>
+    <div className='bottomdiv'>
+    <button onClick={handlePrevStep} className="bottomgreybutton"> Back </button>
     </div>
-    <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
+    <div className='bottomdiv'>
+    <button onClick={handleNextStep} className="bottompinkbutton" > Next </button>
     </div>
     </div>
   </div>
@@ -390,7 +390,7 @@ const Step3 = ({ handleNextStep, handlePrevStep }) => (
 const Step4 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
     <AppBody>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+  <div className='maincontainer'>
   <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
   <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 4 - Add Additional Info</Heading>
      <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
@@ -399,12 +399,12 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
                   </AtomBox>
 
 
-    <div   className="row setup-content" id="step-3">
+    <div id="step-3">
         <div      >
             <div     >
-            <div style={{display:"flex", flexDirection:"row"}} >
+            <div className='maincontainer2'>
   
-  <div style={{ marginBottom:"15px", marginTop:"25px"}}     >
+  <div className='step2row1left'>
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Logo URL
@@ -414,7 +414,7 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"25px",marginLeft:"55px"}}      >
+   <div className='step2row1right2'   >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Website
                   </Text>
@@ -425,9 +425,9 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
 
 </div>
 
-<div style={{display:"flex", flexDirection:"row"}} >
+<div className='maincontainer2'>
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div className='step2row1left'>
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Facebook
@@ -437,7 +437,7 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div className='step2row1right2'>
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Twitter
                   </Text>
@@ -448,9 +448,9 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
 
 </div>
 
-<div style={{display:"flex", flexDirection:"row"}} >
+<div className='maincontainer2'>
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div className='step2row1left' >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Github
@@ -460,7 +460,7 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div className='step2row1right2'>
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Telegram
                   </Text>
@@ -472,9 +472,9 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
 </div>
 
 
-<div style={{display:"flex", flexDirection:"row"}} >
+<div className='maincontainer2'>
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div className='step2row1left' >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Instagram
@@ -484,7 +484,7 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div className='step2row1right2'>
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Discord
                   </Text>
@@ -496,9 +496,9 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
 </div>
 
 
-<div style={{display:"flex", flexDirection:"row"}} >
+<div className='maincontainer2'>
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div className='step2row1left'>
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Reddit
@@ -508,7 +508,7 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
             </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div className='step2row1right2'>
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Youtube
                   </Text>
@@ -531,12 +531,12 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
     </div>
 
     <Divider margin="0px" />
-    <div style={{display:"flex", justifyContent:"space-between"}}>
-    <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }}  > Back </button>
+    <div className='step2row1'>
+    <div className='bottomdiv'>
+    <button onClick={handlePrevStep} className="bottomgreybutton" > Back </button>
     </div>
-     <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
+     <div className='bottomdiv'>
+    <button onClick={handleNextStep} className="bottompinkbutton"> Next </button>
  </div>
  </div>
   </div>
