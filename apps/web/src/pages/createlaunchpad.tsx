@@ -15,8 +15,6 @@ import {
   SearchInput,
   DateInput,
   Select,
-  Checkbox,
-   Flex,
    PageHeader,
    Heading
 
@@ -85,87 +83,86 @@ const MultiStepForm = () => {
 };
 
 const Step1 = ({ handleNextStep }) => (
-<PageHeader>
-<AppBody>
- 
-    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}>
-    <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-     <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 1 - Verify Token</Heading>
-     <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
-     Enter the token address and verify
-                  </Text>
-                  </AtomBox>
-    <div id="step-1">
-        <div>
-            <div>
-            <div >
-            <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Token Address
-                  </Text>
-                    <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder="Enter Token Address" />
-            </LabelWrapper>
-                </div>
-
-                <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
-                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Currency
-                  </Text>
-                  <div style={{marginTop:"10px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f' , width:"20px", height:"20px", verticalAlign:"bottom"}} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>BNB</label><br/>
+  <PageHeader>
+  <AppBody>
+      <div className='maincontainer'>
+      <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+       <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 1 - Verify Token</Heading>
+       <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
+       Enter the token address and verify
+                    </Text>
+                    </AtomBox>
+      <div  id="step-1">
+          <div>
+              <div>
+              <div className='maindivstep1' >
+              <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                      Token Address
+                    </Text>
+                      <LabelWrapper>
+                <SearchInput onChange={handleChangeQuery} placeholder="Enter Token Address" />
+              </LabelWrapper>
                   </div>
-                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>BUSD</label><br/>
-                  <div style={{marginTop:"4px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>USDC</label><br/>
-                  </div>
-                  <input style={{ accentColor:'#f8567f' , width:"20px", height:"20px", verticalAlign:"bottom"}} type="radio" id="radioButton1" name="radioGroup" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>USDT</label><br/>
-                  </div>
-
-                  <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
-                  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Fee options
-                  </Text>
-                  <div style={{marginTop:"10px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>5% BNB raised only</label><br/>
-                  </div>
-                  <div style={{marginTop:"4px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Other</label><br/>
-                  </div>
-                  </div>
-
-                  <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
-                  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
-                    Listing options
-                  </Text>
-                  <div style={{marginTop:"10px", marginBottom:"4px"}}>
-                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }} type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Auto Listing</label><br/>
-                  </div>
-                  <div style={{marginTop:"4px", marginBottom:"25px"}}>
-                  <input style={{ accentColor:'#f8567f', width:"20px", height:"20px", verticalAlign:"bottom" }}  type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
-                  <label style={{marginLeft:"8px",  color:"#7c6cac"}}>Manual Listing</label><br/>
                  
+                  <div className='Radiobuttongroup'>
+                  <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                      Currency
+                    </Text>
+                    <div className='Radiobuttongroupstep1' >
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                    <label className='lablestep1'>BNB</label><br/>
+                    </div>
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                    <label className='lablestep1'>BUSD</label><br/>
+                    <div className='radiostep1' >
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                    <label className='lablestep1'>USDC</label><br/>
+                    </div>
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup" value="option1"/>
+                    <label className='lablestep1'>USDT</label><br/>
+                    </div>
+  
+                    <div  className='Radiobuttongroupstep1'>
+                    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                      Fee options
+                    </Text>
+                    <div className='radiostep1' >
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
+                    <label className='lablestep1'>5% BNB raised only</label><br/>
+                    </div>
+                    <div className='radiostep1'>
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup2" value="option1"/>
+                    <label className='lablestep1'>Other</label><br/>
+                    </div>
+                    </div>
+  
+                    <div  className='Radiobuttongroupstep1'>
+                    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
+                      Listing options
+                    </Text>
+                    <div className='radiostep1'>
+                    <input className='radioinputstep1' type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
+                    <label className='lablestep1'>Auto Listing</label><br/>
+                    </div>
+                    <div className='radilastostep1'>
+                    <input className='radioinputstep1'  type="radio" id="radioButton1" name="radioGroup3" value="option1"/>
+                    <label className='lablestep1'>Manual Listing</label><br/>
+                   
+                    </div>
                   </div>
-                </div>
-            </div>
-        </div>
+              </div>
+          </div>
+      </div>
+      <Divider margin="0px" />
+      <div className='bottomdiv'>
+      <button  onClick={handleNextStep} className="bottomgreybutton"> Next </button>
+      </div>
     </div>
-    <Divider margin="0px" />
-    <div style={{marginTop:"30px"}}>
-    <button  onClick={handleNextStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Next </button>
-    </div>
-  </div>
-  </AppBody>
-  </PageHeader>
-
-
-);
+    </AppBody>
+    </PageHeader>
+  
+  
+  );
 
 const Step2 = ({ handleNextStep, handlePrevStep }) => (
   <PageHeader>
@@ -518,11 +515,11 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
    </div>
 
 </div>
-<div      >
+<div className='desc'>
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Description
                   </Text>
-                    <LabelWrapper style={{marginBottom:"25px"}}>
+                    <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Description" />
             </LabelWrapper>
                 </div>
@@ -547,105 +544,105 @@ const Step4 = ({ handleNextStep, handlePrevStep }) => (
 const Step5 = ({ handlePrevStep }) => (
   <PageHeader>
     <AppBody>
-  <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+  <div className='maincontainer'>
   <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 5 - Finish</Heading>
+  <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 4 - Finish</Heading>
      <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
      Review your information
                   </Text>
         </AtomBox>
         
-    <div   className="row setup-content" id="step-4">
-        <div      >
-            <div     >
+    <div>
+        <div>
+            <div>
                
-                <div style={{marginTop:"25px", display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='maindivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Total Tocken</Text>
                      <Text color="textSubtle" fontSize="19px" textAlign="left">530,875 TN</Text>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Factory Address</Text>
-                     <h2 style={{color:'#f8567f'}}>Dx28x71D3dO36bxxd5</h2>
+                     <h2 className='h2colorstep4'>Dx28x71D3dO36bxxd5</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4'>
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken name</Text>
-                     <h2 style={{color:'#f8567f'}}>Test</h2>
+                     <h2 className='h2colorstep4'>Test</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken Symbol</Text>
-                     <h2 style={{color:'#f8567f'}}>TN</h2>
+                     <h2 className='h2colorstep4'>TN</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4'>
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Tocken Decimal</Text>
-                     <h2 style={{color:'#f8567f'}}>18</h2>
+                     <h2 className='h2colorstep4'>18</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Presale rate</Text>
-                     <h2 style={{color:'#f8567f'}}>10 TN</h2>
+                     <h2 className='h2colorstep4'>10 TN</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Listing rate</Text>
-                     <h2 style={{color:'#f8567f'}}>1 TN</h2>
+                     <h2 className='h2colorstep4'>1 TN</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Sale method</Text>
-                     <h2 style={{color:'#f8567f'}}>Public</h2>
+                     <h2 className='h2colorstep4'>Public</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Softcap</Text>
-                     <h2 style={{color:'#f8567f'}}>25000 BNB</h2>
+                     <h2 className='h2colorstep4'>25000 BNB</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Hardcap</Text>
-                     <h2 style={{color:'#f8567f'}}>50000 BNB</h2>
+                     <h2 className='h2colorstep4'>50000 BNB</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Unsold Token</Text>
-                     <h2 style={{color:'#f8567f'}}>Retund</h2>
+                     <h2 className='h2colorstep4'>Retund</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Minimum Buy</Text>
-                     <h2 style={{color:'#f8567f'}}>0,1BNB</h2>
+                     <h2 className='h2colorstep4'>0,1BNB</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Msximum Buy</Text>
-                     <h2 style={{color:'#f8567f'}}>1000000</h2>
+                     <h2 className='h2colorstep4'>1000000</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Liquidity</Text>
-                     <h2 style={{color:'#f8567f'}}>65%</h2>
+                     <h2 className='h2colorstep4'>65%</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Stsrt time</Text>
-                     <h2 style={{color:'#f8567f'}}>2023-01-28T08.00(UTC)</h2>
+                     <h2 className='h2colorstep4'>2023-01-28T08.00(UTC)</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">End time</Text>
-                     <h2 style={{color:'#f8567f'}}>2023-01-31T08.00(UTC)</h2>
+                     <h2 className='h2colorstep4'>2023-01-31T08.00(UTC)</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">Liquidity lockup time</Text>
-                     <h2 style={{color:'#f8567f'}}>10 min</h2>
+                     <h2 className='h2colorstep4'>10 min</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between", }}    >
+                <div className='seconddivstep4' >
                      <Text color="textSubtle" fontSize="19px" textAlign="left">website</Text>
-                     <h2 style={{color:'#f8567f'}}>www.google.com</h2>
+                     <h2 className='h2colorstep4'>www.google.com</h2>
                 </div>
-                <div style={{ display:"flex", flexDirection: "row",justifyContent: "space-between",marginBottom:"25px" }}    >
-                     <Text color="textSubtle" fontSize="19px" textAlign="left" style={{color:'#f8567f'}}>Description</Text>
-                     <h2 style={{color:'#f8567f'}}>Desc</h2>
+                <div className='therddivstep4' >
+                     <Text color="textSubtle" fontSize="19px" textAlign="left">Description</Text>
+                     <h2 className='h2colorstep4'>Desc</h2>
                 </div>
             </div>
         </div>
     </div>
 
     <Divider margin="0px" />
-    <div style={{display:"flex", justifyContent:"space-between"}}>
-    <div style={{marginTop:"30px",marginLeft:"12px"}}>
-    <button onClick={handlePrevStep} style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#ccc', color: '#000', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Back </button>
+    <div className='step2row1'>
+    <div className='bottomdiv'>
+    <button className='bottomgreybutton' onClick={handlePrevStep}  > Back </button>
   </div>
-  <div style={{marginTop:"30px",marginRight:"12px"}}>
-    <button style={{ width:"85px" ,fontSize:"16px" ,backgroundColor: '#f8567f', color: '#fff', padding: '0.5em', borderRadius: '0.25em',border: 'none' }} > Submit </button>
+  <div  className='bottomdiv'>
+    <button className='bottompinkbutton' > Submit </button>
     </div>
     </div>
   </div>

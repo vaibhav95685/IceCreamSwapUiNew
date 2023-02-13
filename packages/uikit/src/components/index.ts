@@ -52,5 +52,5 @@ export * from "./RoiCalculatorModal";
 export * from "./Balance";
 export * from "./ToggleView";
 export * from "./DateInput";
-
+export * from "./CustomInput";
 export type { DropdownMenuItems } from "./DropdownMenu";

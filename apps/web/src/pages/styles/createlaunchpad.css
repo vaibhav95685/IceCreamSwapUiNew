@@ -19,6 +19,10 @@ justify-content: space-between;
 
 }
 
+.desc{
+    margin-bottom: 25px;
+}
+
 .step2row1right{
 
 margin-bottom: 15px;
@@ -67,4 +71,60 @@ margin-top: 15px;
     display: flex;
     flex-direction: row;
 
+}
+
+.maindivstep1{
+    margin-bottom: 15px;
+    margin-top:15px ;
+}
+
+.Radiobuttongroupstep1{
+    margin-top:15px ;
+    margin-bottom: 4px;  
+}
+
+
+.radioinputstep1{
+ accent-color:#f8567f ;
+ width:20px;
+ height: 20px;
+ vertical-align: bottom;
+}
+
+.lablestep1{
+    margin-Left:8px;
+    color:#7c6cac;
+}
+
+.radiostep1{
+margin-top: 10px;
+margin-bottom: 4px;
+}
+
+.radilastostep1{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    }
+/*start step4 */
+.maindivstep4{
+display: flex;
+flex-direction: row;
+justify-content:space-between ;
+margin-top: 25px;
+}
+.seconddivstep4{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;   
+  
+}
+.therddivstep4{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;  
+    margin-bottom: 25px; 
+    
+}
+.h2colorstep4{
+    color: #f8567f;
 }
