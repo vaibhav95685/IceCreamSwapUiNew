@@ -50,7 +50,7 @@ const MultiStepForm = () => {
 
           </Head>
 
-          <div className="maincontainer"  > 
+          <div className="maincontainer"  >
             <div>
 
 
@@ -83,13 +83,13 @@ const MultiStepForm = () => {
                       },
 
                     ]}
-                  // onOptionChange={handleSortOptionChange}
+
                   />
                 </LabelWrapper>
 
 
               </div>
-              <div   className="inputdiv"  >
+              <div className="inputdiv"  >
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                   Name
                 </Text>
@@ -132,8 +132,8 @@ const MultiStepForm = () => {
             </div>
 
             <Divider margin="0px" />
-            <div  className="buttondiv">
-              <button  className="nextBtn btn-lg pull-left bottombutton" >Create Token</button>
+            <div className="buttondiv">
+              <button className="nextBtn btn-lg pull-left bottombutton" >Create Token</button>
             </div>
 
 
