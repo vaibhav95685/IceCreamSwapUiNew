@@ -20,6 +20,7 @@ const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
   setQuery(event.target.value)
 }
 
+
 const MultiStepForm = () => {
   const { pathname, query: urlQuery } = useRouter()
   const [_query, setQuery] = useState('')
@@ -257,7 +258,7 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                         Liquidity
                       </Text>
                       <LabelWrapper>
-                        <SearchInput placeholder="Liquidity %" />
+                        <SearchInput onChange={handleChangeQuery} placeholder="Liquidity %" />
                       </LabelWrapper>
                     </div>
                   </div>
