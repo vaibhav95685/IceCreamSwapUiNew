@@ -71,9 +71,9 @@ const UseVesting = () => {
               </Text>
  
                   
- <div style={{display:"flex", flexDirection:"row", marginTop:"10px", justifyContent:"space-between"}} >
+ <div className="step2row1">
   
-               <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+               <div className="step2row1left">
               
                <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                TGE Date
@@ -83,7 +83,7 @@ const UseVesting = () => {
             </LabelWrapper>
                 </div>
 
-                <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+                <div className="step2row1right">
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                 TGE Percent
                   </Text>
@@ -94,9 +94,9 @@ const UseVesting = () => {
 
  </div>
 
- <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
+ <div className="step2row1" >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div className="step2row1left" >
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
   Cycle (days)*
@@ -106,7 +106,7 @@ const UseVesting = () => {
 </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div className="step2row1right" >
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
    Cycle Release
      </Text>
@@ -144,9 +144,9 @@ const UseVesting = () => {
 <Text marginBottom={"5px"} marginTop={"20px"} color="textSubtle" fontSize="17px" textAlign="left">
               For Investor
               </Text>       
-<div style={{display:"flex", flexDirection:"row", marginTop:"10px", justifyContent:"space-between"}} >
+<div className="step2row1" >
   
-  <div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+  <div className="step2row1left">
  
   <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
   TGE Date
@@ -156,7 +156,7 @@ const UseVesting = () => {
 </LabelWrapper>
    </div>
 
-   <div style={{ marginBottom:"15px",marginTop:"5px",marginLeft:"55px"}}      >
+   <div className="step2row1right">
    <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
    TGE Percent
      </Text>
@@ -167,9 +167,9 @@ const UseVesting = () => {
 
 </div>
 
-<div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} >
+<div className="step2row1" >
 
-<div style={{ marginBottom:"15px", marginTop:"5px"}}     >
+<div className="step2row1left">
 
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
 Cycle (days)*
@@ -179,7 +179,7 @@ Cycle (days)*
 </LabelWrapper>
 </div>
 
-<div style={{ marginBottom:"25px",marginTop:"5px",marginLeft:"55px"}}      >
+<div className="step2row1left">
 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
 Cycle Release
 </Text>

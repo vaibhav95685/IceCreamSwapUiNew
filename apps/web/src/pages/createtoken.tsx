@@ -120,9 +120,13 @@ const MultiStepForm = () => {
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Total Supply
                   </Text>
+
+
                     <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Total Supply" />
             </LabelWrapper>
+
+            
                 </div>
              
  </div>

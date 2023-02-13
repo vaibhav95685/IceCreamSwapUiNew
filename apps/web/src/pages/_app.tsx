@@ -23,17 +23,19 @@ import { Blocklist, Updaters } from '..'
 import { SentryErrorBoundary } from '../components/ErrorBoundary'
 import Menu from '../components/Menu'
 import Providers from '../Providers'
-import './createlaunchpad.css'
 import GlobalStyle from '../style/Global'
 import { SupportedChainsProvider } from 'hooks/useSupportedChains'
 import { CHAIN_IDS } from 'utils/wagmi'
+import './styles/createlaunchpad.css'
 
 const EasterEgg = dynamic(() => import('components/EasterEgg'), { ssr: false })
 
 // This config is required for number formatting
 BigNumber.config({
+  
   EXPONENTIAL_AT: 1000,
   DECIMAL_PLACES: 80,
+
 })
 
 function GlobalHooks() {
