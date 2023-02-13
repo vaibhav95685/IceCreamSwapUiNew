@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Radio from './Radio';
-import Dropdown from './Dropdown';
-import Dropdown1 from './Dropdown1';
 import { AppBody } from 'components/App'
 import {  useMemo } from 'react';
 import UseVesting from './usevesting';
@@ -57,7 +55,6 @@ const MultiStepForm = () => {
   
 
   const [step, setStep] = useState(1);
- 
   const handleNextStep = () => setStep(step + 1);
   const handlePrevStep = () => setStep(step - 1);
 
@@ -90,17 +87,18 @@ const MultiStepForm = () => {
 const Step1 = ({ handleNextStep }) => (
 <PageHeader>
 <AppBody>
-    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}  >
+ 
+    <div style={{paddingTop:"50px", paddingBottom:"100px", marginLeft:"auto", marginRight:"auto", width:"85%"}}>
     <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
      <Heading  marginBottom={"5px"} textAlign={"center"} as="h2"> Step 1 - Verify Token</Heading>
      <Text textAlign={"center"} marginBottom={"5px"} color="textSubtle" fontSize="17px">
      Enter the token address and verify
                   </Text>
                   </AtomBox>
-    <div   className="row setup-content" id="step-1">
-        <div   className="col-xs-8">
-            <div   className="col-md-8">
-            <div style={{ marginBottom:"15px", marginTop:"15px"}}     >
+    <div id="step-1">
+        <div>
+            <div>
+            <div className='tokenaddress'>
             <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Token Address
                   </Text>
@@ -108,7 +106,7 @@ const Step1 = ({ handleNextStep }) => (
               <SearchInput onChange={handleChangeQuery} placeholder="Enter Token Address" />
             </LabelWrapper>
                 </div>
-               
+
                 <div style={{ marginTop:'15px' }} className='Radiobuttongroup'>
                 <Text marginBottom={"10px"} color="textSubtle" fontSize="17px" textAlign="left">
                     Currency
@@ -187,7 +185,9 @@ const Step2 = ({ handleNextStep, handlePrevStep }) => (
                     Presale rate
                   </Text>
                     <LabelWrapper>
+
               <SearchInput onChange={handleChangeQuery} placeholder="Presale rate" />
+          
             </LabelWrapper>
                 </div>
 
