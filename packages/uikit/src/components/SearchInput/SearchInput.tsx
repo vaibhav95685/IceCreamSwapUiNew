@@ -39,6 +39,7 @@ const SearchInput: React.FC<React.PropsWithChildren<Props>> = ({
     setSearchText(e.target.value);
     debouncedOnChange(e);
   };
+  
   useEffect(() => {
     if (initialValue) {
       setSearchText(initialValue);
