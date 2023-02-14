@@ -134,7 +134,8 @@ const config: (
         },
         {
           label: t('Current Launchpad'),
-          href: '/CurrentLaunchpad',
+          // href: '/CurrentLaunchpad',
+          href: '/current-launchpad',
           supportChainIds: SUPPORT_STAKING,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
