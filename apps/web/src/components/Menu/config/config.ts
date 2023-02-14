@@ -124,7 +124,7 @@ const config: (
       items: [
         {
           label: t('Create Token'),
-          href: '/createtoken',
+          href: '/create-token',
           supportChainIds: SUPPORT_FARMS,
         },
         {

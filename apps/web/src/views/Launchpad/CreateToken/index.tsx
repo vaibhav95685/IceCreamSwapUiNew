@@ -30,7 +30,7 @@ const LabelWrapper = styled.div`
 
 
 
-const MultiStepForm = () => {
+const CreateToken = () => {
 
 
   const { pathname, query: urlQuery } = useRouter()
@@ -145,4 +145,4 @@ const MultiStepForm = () => {
 
 
 
-export default MultiStepForm;
+export default CreateToken;
