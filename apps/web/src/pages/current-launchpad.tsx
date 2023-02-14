@@ -1,10 +1,10 @@
-import CurrentLaunchpadCard from '../views/Launchpad/CurrentLaunchpad'
+import CurrentLaunchpad from '../views/Launchpad/CurrentLaunchpad'
 
 
 const CurrentLaunchpadPage = () => {
   return (
     <>
-    <CurrentLaunchpadCard/>
+    <CurrentLaunchpad/>
     </>
   )
 }
