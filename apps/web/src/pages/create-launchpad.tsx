@@ -1,4 +1,4 @@
-import CreateLaunchpad from '../views/CreateLaunchpad'
+import CreateLaunchpad from '../views/Launchpad/CreateLaunchpad'
 
 
 const CreateLaunchpadPage = () => {
