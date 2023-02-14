@@ -19,7 +19,6 @@ const CurrentLaunchpadCardHeader = () => {
         <Text color="green">Sale Live</Text>
       </Flex>
       <Text marginBottom={'10px'} color="textSubtle" fontSize="19px" textAlign="left">
-        {' '}
         Crazy Monkey
       </Text>
     </>

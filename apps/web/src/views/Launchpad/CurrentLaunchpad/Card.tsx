@@ -16,7 +16,6 @@ const StyledCard = styled(Card)`
   ${({ theme }) => theme.mediaQueries.sm} {
     max-width: 350px;
     margin: 0 12px 46px;
-   
   }
 `
 
@@ -26,10 +25,6 @@ const CurrentLaunchpadCardInnerContainer = styled(Flex)`
   padding: 24px;
   width: fixed;
 `
-
-
-
-
 
 const CurrentLaunchpadCard = () => {
   const { pathname, query: urlQuery } = useRouter()
@@ -41,20 +36,16 @@ const CurrentLaunchpadCard = () => {
     setQuery(event.target.value)
   }
   return (
-   
     <StyledCard>
       <CurrentLaunchpadCardInnerContainer>
         <Header />
         <Text marginBottom={'0px'} color="textSubtle" fontSize="21px" textAlign="left">
-         
           Fair Launch - Max buy 0.35 BU...
         </Text>
         <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
-        
           Soft
         </Text>
         <Text marginBottom={'10px'} color="textSubtle" fontSize="15px" textAlign="left">
-         
           5 BUSD
         </Text>
         <ProgresBar />
@@ -63,7 +54,6 @@ const CurrentLaunchpadCard = () => {
         <Bottom />
       </CurrentLaunchpadCardInnerContainer>
     </StyledCard>
-  
   )
 }
 
