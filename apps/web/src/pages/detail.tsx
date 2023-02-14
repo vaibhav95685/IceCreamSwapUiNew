@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Radio from './Radio';
-import Dropdown from './Dropdown';
-import Dropdown1 from './Dropdown1';
 import {  useMemo } from 'react'
 import { AppBody } from 'components/App';
 import Divider from 'views/Farms/components/Divider'

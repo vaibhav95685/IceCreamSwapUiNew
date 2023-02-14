@@ -129,7 +129,7 @@ const config: (
         },
         {
           label: t('Create Launchpad'),
-          href: '/createlaunchpad',
+          href: '/create-launchpad',
           supportChainIds: SUPPORT_STAKING,
         },
         {

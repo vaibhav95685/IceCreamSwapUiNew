@@ -13,8 +13,7 @@ import {
     Select,
     Checkbox,
      Flex,
-     PageHeader,
-     Heading
+     
   
   } from '@pancakeswap/uikit'
   import styled from 'styled-components'

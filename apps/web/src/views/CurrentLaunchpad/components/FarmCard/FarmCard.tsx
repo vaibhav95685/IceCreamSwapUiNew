@@ -185,30 +185,10 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
     </Link>
     </Flex>
         </Flex>
-        {/* <CardActionsContainer
-          farm={farm}
-          lpLabel={lpLabel}
-          account={account}
-          addLiquidityUrl={addLiquidityUrl}
-          displayApr={displayApr}
-        /> */}
+       
       </FarmCardInnerContainer>
 
-      {/* <ExpandingWrapper>
-        <ExpandableSectionButton onClick={toggleExpandableSection} expanded={showExpandableSection} /> */}
-        {/* {showExpandableSection && (
-          <DetailsSection
-            removed={removed}
-            scanAddressLink={getBlockExploreLink(lpAddress, 'address', chainId)}
-            infoAddress={`/info${multiChainPaths[chainId]}/pools/${lpAddress}`}
-            totalValueFormatted={totalValueFormatted}
-            lpLabel={lpLabel}
-            addLiquidityUrl={addLiquidityUrl}
-            isCommunity={farm.isCommunity}
-            auctionHostingEndDate={farm.auctionHostingEndDate}
-          />
-        )} */}
-      {/* </ExpandingWrapper> */}
+     
     </StyledCard>
   )
 }
