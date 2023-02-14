@@ -79,7 +79,7 @@ margin-top: 15px;
 }
 
 .Radiobuttongroupstep1{
-    margin-top:15px ;
+    margin-top:8px ;
     margin-bottom: 4px;  
 }
 
@@ -96,15 +96,7 @@ margin-top: 15px;
     color:#7c6cac;
 }
 
-.radiostep1{
-margin-top: 10px;
-margin-bottom: 4px;
-}
 
-.radilastostep1{
-    margin-top: 10px;
-    margin-bottom: 25px;
-    }
 /*start step4 */
 .maindivstep4{
 display: flex;

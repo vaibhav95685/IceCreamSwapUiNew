@@ -48,9 +48,11 @@ export const ImageWrapper = styled.div`
   }
   z-index: 2;
 `
+
 const StyledCardBody = styled(CardBody)`
   border-bottom: none;
 `
+
 const StyledCardFooter = styled(CardFooter)`
   border-top: none;
   position: relative;
