@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-// import Dropdown2 from './Dropdown2';
 import { AppBody } from 'components/App'
 import {
   AtomBox

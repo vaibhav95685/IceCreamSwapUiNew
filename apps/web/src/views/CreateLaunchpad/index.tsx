@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
-import Radio from './Radio'
+import Radio from './components/Radio'
 import { AppBody } from 'components/App'
 import { useMemo } from 'react'
-import UseVesting from './usevesting'
+import UseVesting from './components/usevesting'
 import { AtomBox } from '@pancakeswap/ui'
 import Divider from 'views/Farms/components/Divider'
-import { Text, Farm as FarmUI, SearchInput, DateInput, Select, PageHeader, Heading } from '@pancakeswap/uikit'
+import { Text, Farm as FarmUI, SearchInput, Select, PageHeader, Heading } from '@pancakeswap/uikit'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 
@@ -15,6 +14,8 @@ const LabelWrapper = styled.div`
     font-size: 12px;
   }
 `
+
+
 
 const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
   setQuery(event.target.value)
@@ -544,7 +545,7 @@ const Step5 = ({ handlePrevStep }) => (
         <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
           <Heading marginBottom={'5px'} textAlign={'center'} as="h2">
             {' '}
-            Step 4 - Finish
+            Step 5 - Finish
           </Heading>
           <Text textAlign={'center'} marginBottom={'5px'} color="textSubtle" fontSize="17px">
             Review your information
