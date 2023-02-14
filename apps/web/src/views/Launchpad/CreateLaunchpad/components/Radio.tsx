@@ -9,7 +9,7 @@ function ExampleForm() {
 
   return (
     <form>
-      <div style={{ display: 'inline-block',marginTop:"15px" }}>
+      <div className='radiostep2'>
         <input
           type="radio"
           name="example"
@@ -23,44 +23,17 @@ function ExampleForm() {
         />
         <label
           htmlFor="Enable"
-          style={{
-            display: 'inline-block',
-            width: '20px',
-            height: '20px',
-            background: '#fff',
-            border: '2px solid #f8567f',
-            borderRadius: '50%',
-            cursor: 'pointer',
-            padding:"10px",
-            position: 'relative',
-          }}
+          className='labelstep2'
         >
           {selectedValue === 'Enable' && (
-            <span
-              style={{
-                position: 'absolute',
-                top: '4px',
-                left: '4px',
-                width: '12px',
-                height: '12px',
-                borderRadius: '50%',
-                
-                background: '#f8567f',
-              }}
-            />
+            <span className='span1step2'/>
           )}
         </label>
-        <span style={{
-            
-            
-            padding:"10px",
-            color:"#7c6cac"
-           
-          }}>
+        <span className='span2step2'>
         Enable
         </span>
       </div>
-      <div style={{ display: 'inline-block' ,marginTop:"15px",marginLeft:"20px" }}>
+      <div className='div2estep2'>
         <input
           type="radio"
           name="example"
@@ -74,38 +47,15 @@ function ExampleForm() {
         />
         <label
           htmlFor="Disable"
-          style={{
-            display: 'inline-block',
-            width: '20px',
-            height: '20px',
-            background: '#fff',
-            border: '2px solid #f8567f',
-            borderRadius: '50%',
-            cursor: 'pointer',
-            padding:"10px",
-            position: 'relative',
-          }}
+         className='labelstep2'
         >
           {selectedValue === 'Disable' && (
             <span
-              style={{
-                position: 'absolute',
-                top: '4px',
-                left: '4px',
-                width: '12px',
-                height: '12px',
-                borderRadius: '50%',
-                background: '#f8567f',
-              }}
+             className='span1step2'
             />
           )}
         </label>
-        <span style={{
-            
-            
-            padding:"10px",
-            color:"#7c6cac"
-          }}>
+        <span className='span2step2'>
         Disable
         </span>
       </div>

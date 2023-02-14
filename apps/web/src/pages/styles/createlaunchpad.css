@@ -1,48 +1,3 @@
-.maincontainer{
-padding-top: 50x;
-padding-bottom: 100px;
-margin-left: auto;
-margin-right: auto;
-width: 85%;
-}
-
-.step2row1{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-}
-
-.step2row1left{
-
-    margin-bottom: 15px;
-    margin-top: 15px;
-
-}
-
-.desc{
-    margin-bottom: 25px;
-}
-
-.step2row1right{
-
-margin-bottom: 15px;
-margin-top: 15px;
-
-}
-.step2row1right2{
-
-    margin-bottom: 15px;
-    margin-top: 15px;
-    margin-left: 55px;
-    
- }
-  
-
-.bottomdiv{
-   margin-top: 30px;
-   margin-left: 12px;
-}
-
 .bottomgreybutton{
   width: 85px;
   font-size: 16px;
@@ -51,10 +6,7 @@ margin-top: 15px;
   padding: 0.5em;
   border-radius: 0.25em;
   border: none;
-
-
 }
-
 .bottompinkbutton{
     width: 85px;
     font-size: 16px;
@@ -63,60 +15,52 @@ margin-top: 15px;
     padding: 0.5em;
     border-radius: 0.25em;
     border: none;
-
 }
-
-
-.maincontainer2{
-    display: flex;
-    flex-direction: row;
-
-}
-
-.maindivstep1{
-    margin-bottom: 15px;
-    margin-top:15px ;
-}
-
-.Radiobuttongroupstep1{
-    margin-top:8px ;
-    margin-bottom: 4px;  
-}
-
-
 .radioinputstep1{
  accent-color:#f8567f ;
  width:20px;
  height: 20px;
  vertical-align: bottom;
 }
-
 .lablestep1{
     margin-Left:8px;
     color:#7c6cac;
 }
-
-
-/*start step4 */
-.maindivstep4{
-display: flex;
-flex-direction: row;
-justify-content:space-between ;
-margin-top: 25px;
-}
-.seconddivstep4{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between ;   
-  
-}
-.therddivstep4{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between ;  
-    margin-bottom: 25px; 
-    
-}
 .h2colorstep4{
     color: #f8567f;
+}
+ /* radiostep2 */
+ .radiostep2{
+    display:inline-block ;
+    margin-top: 15px;
+    margin-left: 20px;
+ }
+ .div2estep2{
+    display:inline-block ;
+    margin-top: 15px;
+    margin-left: 20px;
+ }
+.span1step2{
+    position:absolute ;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius:50% ;
+    background: #f8567f;
+}
+.span2step2{
+   padding: 10px;
+   color: #7c6cac;
+}
+.labelstep2{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #f8567f;
+    border-Radius: 50%;
+    cursor: pointer;
+    padding:10px;
+    position: relative;
 }
