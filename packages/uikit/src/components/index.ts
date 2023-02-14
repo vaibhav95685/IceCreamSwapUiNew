@@ -51,7 +51,6 @@ export * from "./ExpandableSectionButton";
 export * from "./RoiCalculatorModal";
 export * from "./Balance";
 export * from "./ToggleView";
-
 export * from "./DateInput";
-
+export * from "./InputBox";
 export type { DropdownMenuItems } from "./DropdownMenu";
