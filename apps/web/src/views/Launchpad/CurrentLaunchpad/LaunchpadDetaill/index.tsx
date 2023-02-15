@@ -30,6 +30,47 @@ const MainContainer = styled.div`
     width: 85%;
   }
 `
+const DivContainer = styled.div`
+   {
+    // margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px;
+  }
+`
+const Value = styled.h2`
+   {
+    // margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px;
+  }
+`
+const Button = styled.div`
+   {
+    margin-top: 30px;
+    margin-left: 12px;
+  }
+`
+const RowDivider = styled.div`
+   {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`
+const Container = styled.div`
+   {
+  }
+`
+const InputDiv = styled.div`
+   {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+`
 
 const LaunchpadDetail = () => {
   const { pathname, query: urlQuery } = useRouter()
@@ -44,7 +85,7 @@ const LaunchpadDetail = () => {
   return (
     <PageHeader>
       <AppBody>
-        <MainContainer >
+        <MainContainer>
           <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
             <Text
               marginTop={'5px'}
@@ -110,192 +151,158 @@ const LaunchpadDetail = () => {
             Stacking DAO Voting And more No mint function! Tax is always at 4% or less! Tax can't be raised above 4%!
             Trade can't be stopped once started!
           </Text>
-          <div className="row setup-content" id="step-4">
-            <div>
-              <div>
-                <div
-                  style={{
-                    marginTop: '20px',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    borderBottom: '1px',
-                  }}
-                >
+          
+            
+              <Container>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Presale Address
                   </Text>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     0x31BoD123455gF2
                   </Text>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Tocken Name
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>AI District</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>AI District</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Tocken Symbol
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>AID</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>AID</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Tocken Decimal
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>18</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>18</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Tocken Address
                   </Text>
-                  <div>
-                    <h2 style={{ color: '#f8567f', textAlign: 'right', fontSize: '15px' }}>0x31BoD1234555655544ad</h2>
+                  <Container>
+                    <Text textAlign="right">0x31BoD1234555655544ad</Text>
                     <Text color="blue" fontSize="15px" textAlign="right">
                       (Do not send BNB to the token address)
                     </Text>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  </Container>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Total Supply
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>1,000,000,000 AID</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>1,000,000,000 AID</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Tokens For Presale
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>369,000,000 AID</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>369,000,000 AID</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Tokens For Liquidity
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>173,555,550 AID</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>173,555,550 AID</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Presale rate
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>1 BNB = 1,230,000 AID</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>1 BNB = 1,230,000 AID</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     First Release For Presale
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>50%</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>50%</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Listing Rate
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>1 BNB = 1,157,500 AID</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>1 BNB = 1,157,500 AID</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Initial Market Cap (estimate)
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>$283,801</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>$283,801</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Softcap
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>75 BNB</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>75 BNB</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Hardcap
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>300 BNB</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>300 BNB</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Unsold Token
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>Refund</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>Refund</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Presale Start Time
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>2023.02.14 12:00 (UTC)</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>2023.02.14 12:00 (UTC)</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Presale End Time
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>2023.02.17 18:00 (UTC)</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>2023.02.17 18:00 (UTC)</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Listing On
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>Pancakeswap</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>Pancakeswap</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Liquidity
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>51%</h2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text>51%</Text>
+                </DivContainer>
+                <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Liquidity lockup time
                   </Text>
-                  <h2 style={{ color: '#f8567f', fontSize: '15px' }}>365 days after pool ends</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style={{ marginBottom: '25px', marginTop: '15px' }}>
+                  <Text>365 days after pool ends</Text>
+                </DivContainer>
+              </Container>
+           
+         
+          <InputDiv>
             <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
               Amount
             </Text>
             <LabelWrapper>
               <SearchInput onChange={handleChangeQuery} placeholder="Amount" />
             </LabelWrapper>
-          </div>
+          </InputDiv>
           <Divider margin="0px" />
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div style={{ marginTop: '30px', marginLeft: '12px' }}>
+          <RowDivider>
+            <Button>
               <Link href={'/current-launchpad'}>
-                <button
-                  style={{
-                    width: '85px',
-                    fontSize: '16px',
-                    backgroundColor: '#ccc',
-                    color: '#000',
-                    padding: '0.5em',
-                    borderRadius: '0.25em',
-                    border: 'none',
-                  }}
-                >
-                  {' '}
-                  Back{' '}
-                </button>
+                <button className="bottomgreybutton">Back</button>
               </Link>
-            </div>
-            <div style={{ marginTop: '30px', marginRight: '12px' }}>
-              <button
-                style={{
-                  width: '85px',
-                  fontSize: '16px',
-                  backgroundColor: '#f8567f',
-                  color: '#fff',
-                  padding: '0.5em',
-                  borderRadius: '0.25em',
-                  border: 'none',
-                }}
-              >
-                {' '}
-                Buy{' '}
-              </button>
-            </div>
-          </div>
+            </Button>
+            <Button>
+              <button className="bottompinkbutton">Buy</button>
+            </Button>
+          </RowDivider>
         </MainContainer>
       </AppBody>
     </PageHeader>
