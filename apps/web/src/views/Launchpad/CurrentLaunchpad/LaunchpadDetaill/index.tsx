@@ -60,6 +60,11 @@ const Button = styled.div`
     margin-left: 12px;
   }
 `
+const ProgressBar = styled.div`
+   {
+   width:60%;
+  }
+`
 const RowDivider = styled.div`
    {
     display: flex;
@@ -69,6 +74,7 @@ const RowDivider = styled.div`
 `
 const Container = styled.div`
    {
+    
   }
 `
 const InputDiv = styled.div`
@@ -323,9 +329,9 @@ const LaunchpadDetail = () => {
               <Text color="textSubtle" fontSize="15px" textAlign="left">
                 Presale Time
               </Text>
-              <Container style={{width: "70%"}}>
+              <ProgressBar>
               <progress value={24} max="72" className="ProgressBar"></progress>
-              </Container>
+              </ProgressBar>
               {/* <progress value={70} max="100">
         </progress> */}
               {/* <Text>2023.02.14 12:00 (UTC)</Text> */}
@@ -334,9 +340,9 @@ const LaunchpadDetail = () => {
               <Text color="textSubtle" fontSize="15px" textAlign="left">
                 Presale Progress
               </Text>
-              <Container style={{width: "70%"}}>
+              <ProgressBar>
               <progress value={50} max="100" className="ProgressBar"></progress>
-              </Container>
+              </ProgressBar>
               
             </DivContainer>
             {/* <DivContainer>
