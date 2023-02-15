@@ -7,6 +7,7 @@ import { Text, Farm as FarmUI, SearchInput, PageHeader } from '@pancakeswap/uiki
 import { AtomBox } from '@pancakeswap/ui'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import { PieChart, Pie, Legend, Sector, Cell, ResponsiveContainer } from 'recharts';
 
 const LabelWrapper = styled.div`
   > ${Text} {
@@ -24,7 +25,7 @@ const LogoContainer = styled.div`
 const MainContainer = styled.div`
    {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 85%;
@@ -81,6 +82,29 @@ const LaunchpadDetail = () => {
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value)
   }
+
+  
+  const data = [
+    { name: 'Total Supply', value: 1000000000 },
+    { name: 'Presale', value: 369000000 },
+    { name: 'Liquidity', value: 173555550 },
+    
+];
+
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
+
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+        <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+            {`${(percent * 100).toFixed(0)}%`}
+        </text>
+    );
+};
 
   return (
     <PageHeader>
@@ -145,53 +169,37 @@ const LaunchpadDetail = () => {
               <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
             </svg>
           </LogoContainer>
-          <Text marginBottom={'15px'} color="textSubtle" fontSize="17px" textAlign="left">
+          {/* <Text marginBottom={'15px'} color="textSubtle" fontSize="17px" textAlign="left">
             AI District is the DAO for AI innovation, community-driven exploration and investment in the future of AI,
             We guide genrations X, Y and Z through AI and learn it together. AI Bots AI Incubator AI Community HUB
             Stacking DAO Voting And more No mint function! Tax is always at 4% or less! Tax can't be raised above 4%!
             Trade can't be stopped once started!
-          </Text>
-          
-            
-              <Container>
-                <DivContainer>
-                  <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    Presale Address
-                  </Text>
-                  <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    0x31BoD123455gF2
-                  </Text>
-                </DivContainer>
-                <DivContainer>
-                  <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    Tocken Name
-                  </Text>
-                  <Text>AI District</Text>
-                </DivContainer>
-                <DivContainer>
-                  <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    Tocken Symbol
-                  </Text>
-                  <Text>AID</Text>
-                </DivContainer>
-                <DivContainer>
-                  <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    Tocken Decimal
-                  </Text>
-                  <Text>18</Text>
-                </DivContainer>
-                <DivContainer>
-                  <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    Tocken Address
-                  </Text>
-                  <Container>
-                    <Text textAlign="right">0x31BoD1234555655544ad</Text>
-                    <Text color="blue" fontSize="15px" textAlign="right">
-                      (Do not send BNB to the token address)
-                    </Text>
-                  </Container>
-                </DivContainer>
-                <DivContainer>
+          </Text> */}
+           
+       
+      <>
+                        <ResponsiveContainer width={320} height={320} >
+                            <PieChart width={400} height={400}>
+                                <Legend layout="horizontal" verticalAlign="top"/>
+                                <Pie
+                                    data={data}
+                                    cx="50%"
+                                    cy="50%"
+                                    labelLine={false}
+                                    label={renderCustomizedLabel}
+                                    outerRadius={80}
+                                    fill="#8884d8"
+                                    dataKey="value"
+                                >
+                                    {data.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                    ))}
+                                </Pie>
+                            </PieChart>
+                        </ResponsiveContainer>          
+        </>
+       
+        <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Total Supply
                   </Text>
@@ -209,18 +217,65 @@ const LaunchpadDetail = () => {
                   </Text>
                   <Text>173,555,550 AID</Text>
                 </DivContainer>
+     
+        </MainContainer>
+      </AppBody>
+    
+   
+    <AppBody>
+<MainContainer>
+            
+    <Container>
+                <DivContainer>
+                  <Text color="textSubtle" fontSize="15px" textAlign="left">
+                    Presale Address
+                  </Text>
+                  <Text color="textSubtle" fontSize="15px" textAlign="left">
+                    0x31BoD123455gF2
+                  </Text>
+                </DivContainer>
+                <DivContainer>
+                  <Text color="textSubtle" fontSize="15px" textAlign="left">
+                    Token Name
+                  </Text>
+                  <Text>AI District</Text>
+                </DivContainer>
+                <DivContainer>
+                  <Text color="textSubtle" fontSize="15px" textAlign="left">
+                    Token Symbol
+                  </Text>
+                  <Text>AID</Text>
+                </DivContainer>
+                {/* <DivContainer>
+                  <Text color="textSubtle" fontSize="15px" textAlign="left">
+                    Token Decimal
+                  </Text>
+                  <Text>18</Text>
+                </DivContainer> */}
+                <DivContainer>
+                  <Text color="textSubtle" fontSize="15px" textAlign="left">
+                    Token Address
+                  </Text>
+                  <Container>
+                    <Text textAlign="right">0x31BoD1234555655544ad</Text>
+                    <Text color="blue" fontSize="15px" textAlign="right">
+                      (Do not send BNB to the token address)
+                    </Text>
+                  </Container>
+                </DivContainer>
+                
                 <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Presale rate
                   </Text>
                   <Text>1 BNB = 1,230,000 AID</Text>
                 </DivContainer>
-                <DivContainer>
+                {/* <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     First Release For Presale
                   </Text>
                   <Text>50%</Text>
-                </DivContainer>
+                </DivContainer> */}
                 <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Listing Rate
@@ -253,9 +308,12 @@ const LaunchpadDetail = () => {
                 </DivContainer>
                 <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
-                    Presale Start Time
+                  Presale Start Time
                   </Text>
+                  {/* <progress value={70} max="100">
+        </progress> */}
                   <Text>2023.02.14 12:00 (UTC)</Text>
+                  
                 </DivContainer>
                 <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
@@ -263,7 +321,7 @@ const LaunchpadDetail = () => {
                   </Text>
                   <Text>2023.02.17 18:00 (UTC)</Text>
                 </DivContainer>
-                <DivContainer>
+                {/* <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Listing On
                   </Text>
@@ -280,9 +338,9 @@ const LaunchpadDetail = () => {
                     Liquidity lockup time
                   </Text>
                   <Text>365 days after pool ends</Text>
-                </DivContainer>
+                </DivContainer> */}
               </Container>
-           
+             
          
           <InputDiv>
             <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
@@ -292,8 +350,10 @@ const LaunchpadDetail = () => {
               <SearchInput onChange={handleChangeQuery} placeholder="Amount" />
             </LabelWrapper>
           </InputDiv>
+         
           <Divider margin="0px" />
           <RowDivider>
+            
             <Button>
               <Link href={'/current-launchpad'}>
                 <button className="bottomgreybutton">Back</button>
@@ -303,10 +363,11 @@ const LaunchpadDetail = () => {
               <button className="bottompinkbutton">Buy</button>
             </Button>
           </RowDivider>
-        </MainContainer>
-      </AppBody>
-    </PageHeader>
+          </MainContainer>
+    </AppBody>
+     
+      </PageHeader>
+     
   )
 }
-
-export default LaunchpadDetail
+export default LaunchpadDetail;

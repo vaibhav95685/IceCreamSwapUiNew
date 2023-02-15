@@ -12,3 +12,112 @@
   border: none;
   border-radius: 15px;
 }
+
+
+#cardHover {
+  width: 280px;
+  height: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.83)), url("https://consciouslifenews.com/wp-content/uploads/2014/08/nature-path.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#imageProfile {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#userNameCard {
+  position: relative;
+  top: -75px;
+  left: 95px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.containBox a {
+  top: -65px;
+  left: 95px;
+  color: #fff;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-follow {
+  text-decoration: none;
+  border: 1.3px solid rgb(54, 166, 210);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Follow */
+.btn-follow:hover {
+  box-shadow: 1px 1px 15px 10px rgba(54, 166, 210, 0.4);
+}
+
+.btn-follow:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(54, 166, 210, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn-follow:hover:before {
+  left: 100%;
+}
+
+/* Button Message */
+.btn-message {
+  text-decoration: none;
+  border: 1.3px solid rgb(28, 187, 107);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-message:hover {
+  box-shadow: 1px 1px 15px 10px rgba(28, 187, 107, 0.4);
+}
+
+.btn-message:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(28, 187, 107, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn-message:hover:before {
+  left: 100%;
+}
+
+.containBox {
+  display: flex;
+}

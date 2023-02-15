@@ -85,7 +85,7 @@ const MultiStepForm = () => {
   }
   return (
     <div>
-      <div className="steps"></div>
+     
       {step === 1 && <Step1 handleNextStep={handleNextStep} myFunction={myFunction} />}
       {step === 2 && <Step2 handleNextStep={handleNextStep} myFunction={myFunction} handlePrevStep={handlePrevStep} />}
       {step === 3 && <Step3 handleNextStep={handleNextStep} myFunction={myFunction} handlePrevStep={handlePrevStep} />}

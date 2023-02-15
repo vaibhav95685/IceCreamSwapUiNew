@@ -22,7 +22,7 @@ interface Props {
   initialValue?: string;
 }
 
-const SearchInput: React.FC<React.PropsWithChildren<Props>> = ({
+const InputBox: React.FC<React.PropsWithChildren<Props>> = ({
   onChange: onChangeCallback,
   placeholder = "Search",
   initialValue,
@@ -53,4 +53,4 @@ const SearchInput: React.FC<React.PropsWithChildren<Props>> = ({
   );
 };
 
-export default SearchInput;
+export default InputBox;
