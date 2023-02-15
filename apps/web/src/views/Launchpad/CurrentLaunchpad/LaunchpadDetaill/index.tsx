@@ -335,7 +335,7 @@ const LaunchpadDetail = () => {
                 Presale Progress
               </Text>
               <Container style={{width: "70%"}}>
-              <progress value={24} max="72" className="ProgressBar"></progress>
+              <progress value={50} max="100" className="ProgressBar"></progress>
               </Container>
               
             </DivContainer>
