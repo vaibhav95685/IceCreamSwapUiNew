@@ -235,17 +235,10 @@ const LaunchpadDetail = () => {
 
       <AppBody>
         <MainContainer>
-          <Video>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/2JT1dRPOBA8"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </Video>
-          <Container>
+        <Video>
+        <iframe width="540" height="315" src="https://www.youtube.com/embed/2JT1dRPOBA8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        </Video>
+        <Container>
             <DivContainer>
               <Text color="textSubtle" fontSize="15px" textAlign="left">
                 Presale Address
