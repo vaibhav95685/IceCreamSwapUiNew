@@ -33,8 +33,7 @@ const MainContainer = styled.div`
 `
 const Video = styled.div`
    {
-
-padding-bottom: 15px;
+    padding-bottom: 15px;
   }
 `
 const DivContainer = styled.div`
@@ -234,13 +233,19 @@ const LaunchpadDetail = () => {
         </MainContainer>
       </AppBody>
 
-      
       <AppBody>
         <MainContainer>
-        <Video>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/2JT1dRPOBA8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </Video>
-        <Container>
+          <Video>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/2JT1dRPOBA8"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </Video>
+          <Container>
             <DivContainer>
               <Text color="textSubtle" fontSize="15px" textAlign="left">
                 Presale Address
@@ -323,18 +328,30 @@ const LaunchpadDetail = () => {
             </DivContainer>
             <DivContainer>
               <Text color="textSubtle" fontSize="15px" textAlign="left">
-                Presale Start Time
+                Presale Time
               </Text>
+              <Container style={{width: "70%"}}>
+              <progress value={24} max="72" className="ProgressBar"></progress>
+              </Container>
               {/* <progress value={70} max="100">
         </progress> */}
-              <Text>2023.02.14 12:00 (UTC)</Text>
+              {/* <Text>2023.02.14 12:00 (UTC)</Text> */}
             </DivContainer>
             <DivContainer>
+              <Text color="textSubtle" fontSize="15px" textAlign="left">
+                Presale Progress
+              </Text>
+              <Container style={{width: "70%"}}>
+              <progress value={24} max="72" className="ProgressBar"></progress>
+              </Container>
+              
+            </DivContainer>
+            {/* <DivContainer>
               <Text color="textSubtle" fontSize="15px" textAlign="left">
                 Presale End Time
               </Text>
               <Text>2023.02.17 18:00 (UTC)</Text>
-            </DivContainer>
+            </DivContainer> */}
             {/* <DivContainer>
                   <Text color="textSubtle" fontSize="15px" textAlign="left">
                     Listing On
