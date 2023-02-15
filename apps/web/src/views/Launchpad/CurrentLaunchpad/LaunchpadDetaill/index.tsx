@@ -31,6 +31,12 @@ const MainContainer = styled.div`
     width: 85%;
   }
 `
+const Video = styled.div`
+   {
+
+padding-bottom: 15px;
+  }
+`
 const DivContainer = styled.div`
    {
     // margin-top: 20px;
@@ -228,9 +234,13 @@ const LaunchpadDetail = () => {
         </MainContainer>
       </AppBody>
 
+      
       <AppBody>
         <MainContainer>
-          <Container>
+        <Video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2JT1dRPOBA8" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </Video>
+        <Container>
             <DivContainer>
               <Text color="textSubtle" fontSize="15px" textAlign="left">
                 Presale Address
