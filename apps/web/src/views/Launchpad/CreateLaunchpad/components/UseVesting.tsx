@@ -56,7 +56,7 @@ const UseVesting = () => {
                       Use vesting ?
                     </Text>
                   </Flex>
-      {showText && <div className="row setup-content" id="step-2">
+      {showText && <div id="step-2">
         <div >
             <div >
         

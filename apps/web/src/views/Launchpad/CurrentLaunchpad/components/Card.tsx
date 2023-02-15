@@ -75,7 +75,7 @@ const CurrentLaunchpadCard = () => {
           <ProgresBar />
         </progress>
         <Text marginBottom={'2px'} color="textSubtle" fontSize="15px" textAlign="left">
-        Lokup Time (66666666 minutes)
+        Sales Ends In
         </Text>
         <progress value={66666666} max="100000000"  className="ProgressBar">
           <ProgresBar />
@@ -87,7 +87,7 @@ const CurrentLaunchpadCard = () => {
         </Flex>
         
         <Flex justifyContent="space-between" marginTop="10px">
-          <Text>Sales End in:</Text>
+          {/* <Text>Sales End in:</Text> */}
           <Flex>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -83,6 +83,8 @@ const InputDiv = styled.div`
   }
 `
 
+
+
 const LaunchpadDetail = () => {
   const { pathname, query: urlQuery } = useRouter()
   const [_query, setQuery] = useState('')
