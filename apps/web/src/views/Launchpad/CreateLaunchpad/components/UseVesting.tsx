@@ -2,15 +2,10 @@ import React, { useState } from "react";
 import { useRouter } from 'next/router'
 import {  useMemo } from 'react';
 import {
-    AtomBox
-    
-    } from '@pancakeswap/ui';
-import {
     Text,
     Farm as FarmUI,
     InputBox,
     DateInput,
-    Select,
     Checkbox,
      Flex,
      
