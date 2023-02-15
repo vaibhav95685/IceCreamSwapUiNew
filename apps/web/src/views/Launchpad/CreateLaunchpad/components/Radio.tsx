@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 function ExampleForm() {
-  const [selectedValue, setSelectedValue] = useState('Enable');
+  const [selectedValue, setSelectedValue] = useState('Enable')
 
   const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
+    setSelectedValue(event.target.value)
+  }
 
   return (
     <form>
-      <div className='radiostep2'>
+      <div className="radiostep2">
         <input
           type="radio"
           name="example"
@@ -21,19 +21,12 @@ function ExampleForm() {
             display: 'none',
           }}
         />
-        <label
-          htmlFor="Enable"
-          className='labelstep2'
-        >
-          {selectedValue === 'Enable' && (
-            <span className='span1step2'/>
-          )}
+        <label htmlFor="Enable" className="labelstep2">
+          {selectedValue === 'Enable' && <span className="span1step2" />}
         </label>
-        <span className='span2step2'>
-        Enable
-        </span>
+        <span className="span2step2">Enable</span>
       </div>
-      <div className='div2estep2'>
+      <div className="div2estep2">
         <input
           type="radio"
           name="example"
@@ -45,23 +38,13 @@ function ExampleForm() {
             display: 'none',
           }}
         />
-        <label
-          htmlFor="Disable"
-         className='labelstep2'
-        >
-          {selectedValue === 'Disable' && (
-            <span
-             className='span1step2'
-            />
-          )}
+        <label htmlFor="Disable" className="labelstep2">
+          {selectedValue === 'Disable' && <span className="span1step2" />}
         </label>
-        <span className='span2step2'>
-        Disable
-        </span>
+        <span className="span2step2">Disable</span>
       </div>
-      
     </form>
-  );
+  )
 }
 
-export default ExampleForm;
+export default ExampleForm
