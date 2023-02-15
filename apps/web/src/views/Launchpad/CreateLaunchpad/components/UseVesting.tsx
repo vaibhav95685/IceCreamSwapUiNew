@@ -8,7 +8,7 @@ import {
 import {
     Text,
     Farm as FarmUI,
-    SearchInput,
+    InputBox,
     DateInput,
     Select,
     Checkbox,
@@ -37,8 +37,8 @@ const UseVesting = () => {
   const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
 
 
-  const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value)
+  const myFunction = (event: React.ChangeEvent<HTMLInputElement>) => {
+    (event.target.value)
   }
 
 
@@ -78,7 +78,7 @@ const UseVesting = () => {
                TGE Date
                   </Text>
                     <LabelWrapper>
-              <DateInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
+              <DateInput onChange={myFunction} placeholder="TGE Date (UTC time)*" />
             </LabelWrapper>
                 </div>
 
@@ -87,7 +87,7 @@ const UseVesting = () => {
                 TGE Percent
                   </Text>
                     <LabelWrapper>
-              <SearchInput onChange={handleChangeQuery} placeholder=" TGE Percent" />
+              <InputBox onChange={myFunction} placeholder=" TGE Percent" />
             </LabelWrapper>
                 </div>
 
@@ -101,7 +101,7 @@ const UseVesting = () => {
   Cycle (days)*
      </Text>
        <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder=" Cycle (days)*" />
+ <InputBox onChange={myFunction} placeholder=" Cycle (days)*" />
 </LabelWrapper>
    </div>
 
@@ -110,7 +110,7 @@ const UseVesting = () => {
    Cycle Release
      </Text>
        <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
+ <InputBox onChange={myFunction} placeholder="Cycle Release Percent*" />
 </LabelWrapper>
    </div>
 
@@ -151,7 +151,7 @@ const UseVesting = () => {
   TGE Date
      </Text>
        <LabelWrapper>
- <DateInput onChange={handleChangeQuery} placeholder="TGE Date (UTC time)*" />
+ <DateInput onChange={myFunction} placeholder="TGE Date (UTC time)*" />
 </LabelWrapper>
    </div>
 
@@ -160,7 +160,7 @@ const UseVesting = () => {
    TGE Percent
      </Text>
        <LabelWrapper>
- <SearchInput onChange={handleChangeQuery} placeholder=" TGE Percent" />
+ <InputBox onChange={myFunction} placeholder=" TGE Percent" />
 </LabelWrapper>
    </div>
 
@@ -174,7 +174,7 @@ const UseVesting = () => {
 Cycle (days)*
 </Text>
 <LabelWrapper>
-<SearchInput onChange={handleChangeQuery} placeholder=" Cycle (days)*" />
+<InputBox onChange={myFunction} placeholder=" Cycle (days)*" />
 </LabelWrapper>
 </div>
 
@@ -183,7 +183,7 @@ Cycle (days)*
 Cycle Release
 </Text>
 <LabelWrapper>
-<SearchInput onChange={handleChangeQuery} placeholder="Cycle Release Percent*" />
+<InputBox onChange={myFunction} placeholder="Cycle Release Percent*" />
 </LabelWrapper>
 </div>
 
