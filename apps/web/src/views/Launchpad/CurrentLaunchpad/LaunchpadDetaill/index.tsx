@@ -236,7 +236,7 @@ const LaunchpadDetail = () => {
       <AppBody>
         <MainContainer>
         <Video>
-        <iframe width="540" height="315" src="https://www.youtube.com/embed/2JT1dRPOBA8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/2JT1dRPOBA8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </Video>
         <Container>
             <DivContainer>
