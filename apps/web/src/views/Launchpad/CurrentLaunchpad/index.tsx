@@ -8,7 +8,8 @@ const ControlContainer = styled.div`
   align-items: center;
   position: relative;
 
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   margin-bottom: 32px;
 
@@ -26,6 +27,8 @@ const CurrentLaunchpad = () => {
   return (
     <>
       <ControlContainer>
+        <CurrentLaunchpadCard />
+        <CurrentLaunchpadCard />
         <CurrentLaunchpadCard />
         <CurrentLaunchpadCard />
         <CurrentLaunchpadCard />
