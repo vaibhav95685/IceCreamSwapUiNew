@@ -74,15 +74,18 @@ const CurrentLaunchpadCard = () => {
         <progress value={70} max="100"  className="ProgressBar">
           <ProgresBar />
         </progress>
+        <Text marginBottom={'2px'} color="textSubtle" fontSize="15px" textAlign="left">
+        Lokup Time (66666666 minutes)
+        </Text>
+        <progress value={66666666} max="100000000"  className="ProgressBar">
+          <ProgresBar />
+        </progress>
        
         <Flex justifyContent="space-between" marginTop="10px">
           <Text>Liquidity:</Text>
           <Text>67%</Text>
         </Flex>
-        <Flex justifyContent="space-between" marginTop="10px">
-          <Text>Lokup Time:</Text>
-          <Text>66666666 minutes</Text>
-        </Flex>
+        
         <Flex justifyContent="space-between" marginTop="10px">
           <Text>Sales End in:</Text>
           <Flex>
