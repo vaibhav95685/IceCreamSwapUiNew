@@ -43,10 +43,8 @@ const CurrentLaunchpadCard = () => {
   const [_query, setQuery] = useState('')
   const normalizedUrlSearch = useMemo(() => (typeof urlQuery?.search === 'string' ? urlQuery.search : ''), [urlQuery])
   const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
-  const [showTooltip, setShowTooltip] = useState(false)
-  const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value)
-  }
+ 
+  
   return (
     <StyledCard>
       <CurrentLaunchpadCardInnerContainer>
@@ -72,7 +70,7 @@ const CurrentLaunchpadCard = () => {
         <Text marginBottom={'2px'} color="textSubtle" fontSize="15px" textAlign="left">
           Progress (107.87%)
         </Text>
-        <progress value={70} max="100" style={{}} className="ProgressBar">
+        <progress value={70} max="100"  className="ProgressBar">
           <ProgresBar />
         </progress>
         <Flex justifyContent="space-between" marginTop="10px">

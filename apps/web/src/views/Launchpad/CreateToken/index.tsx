@@ -51,85 +51,83 @@ const CreateToken = () => {
   return (
     <PageHeader>
       <AppBody>
-       
-          <MainContainer>
+        <MainContainer>
+          <Container>
             <Container>
-              <Container>
-                <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
-                  <Heading marginBottom={'5px'} textAlign={'center'} as="h2">
-                    {' '}
-                    Create Token
-                  </Heading>
-                  <Text textAlign={'center'} color="textSubtle" fontSize="17px">
-                    You can create the token from here !
-                  </Text>
-                </AtomBox>
+              <AtomBox width="full" alignItems="center" flexDirection="column" padding="24px" borderBottom="1">
+                <Heading marginBottom={'5px'} textAlign={'center'} as="h2">
+                  {' '}
+                  Create Token
+                </Heading>
+                <Text textAlign={'center'} color="textSubtle" fontSize="17px">
+                  You can create the token from here !
+                </Text>
+              </AtomBox>
 
-                <LabelWrapper style={{ marginTop: '20px' }}>
-                  <Select
-                    options={[
-                      {
-                        label: 'Standard Token',
-                        value: 'Standard Token',
-                      },
-                      {
-                        label: 'Liquidity Generator Token',
-                        value: 'Liquidity Generator Token',
-                      },
-                      {
-                        label: 'Baby Token',
-                        value: 'Baby Token',
-                      },
-                      {
-                        label: 'Buyback Baby Token',
-                        value: 'Buyback Baby Token',
-                      },
-                    ]}
-                  />
-                </LabelWrapper>
-              </Container>
-              <InputDiv>
-                <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
-                  Name
-                </Text>
-                <LabelWrapper>
-                  <SearchInput onChange={handleChangeQuery} placeholder="Name" />
-                </LabelWrapper>
-              </InputDiv>
-              <InputDiv>
-                <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
-                  Symbol
-                </Text>
-                <LabelWrapper>
-                  <SearchInput onChange={handleChangeQuery} placeholder="Symbol" />
-                </LabelWrapper>
-              </InputDiv>
-              <InputDiv>
-                <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
-                  Decimals
-                </Text>
-
-                <LabelWrapper>
-                  <SearchInput onChange={handleChangeQuery} placeholder="Decimals" />
-                </LabelWrapper>
-              </InputDiv>
-              <InputDiv>
-                <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
-                  Total Supply
-                </Text>
-
-                <LabelWrapper>
-                  <SearchInput onChange={handleChangeQuery} placeholder="Total Supply" />
-                </LabelWrapper>
-              </InputDiv>
+              <LabelWrapper style={{ marginTop: '20px' }}>
+                <Select
+                  options={[
+                    {
+                      label: 'Standard Token',
+                      value: 'Standard Token',
+                    },
+                    {
+                      label: 'Liquidity Generator Token',
+                      value: 'Liquidity Generator Token',
+                    },
+                    {
+                      label: 'Baby Token',
+                      value: 'Baby Token',
+                    },
+                    {
+                      label: 'Buyback Baby Token',
+                      value: 'Buyback Baby Token',
+                    },
+                  ]}
+                />
+              </LabelWrapper>
             </Container>
+            <InputDiv>
+              <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
+                Name
+              </Text>
+              <LabelWrapper>
+                <SearchInput onChange={handleChangeQuery} placeholder="Name" />
+              </LabelWrapper>
+            </InputDiv>
+            <InputDiv>
+              <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
+                Symbol
+              </Text>
+              <LabelWrapper>
+                <SearchInput onChange={handleChangeQuery} placeholder="Symbol" />
+              </LabelWrapper>
+            </InputDiv>
+            <InputDiv>
+              <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
+                Decimals
+              </Text>
 
-            <Divider margin="0px" />
-            <ButtonDiv>
-              <button className="nextBtn btn-lg pull-left bottombutton">Create Token</button>
-            </ButtonDiv>
-          </MainContainer>
-      
+              <LabelWrapper>
+                <SearchInput onChange={handleChangeQuery} placeholder="Decimals" />
+              </LabelWrapper>
+            </InputDiv>
+            <InputDiv>
+              <Text marginBottom={'10px'} color="textSubtle" fontSize="17px" textAlign="left">
+                Total Supply
+              </Text>
+
+              <LabelWrapper>
+                <SearchInput onChange={handleChangeQuery} placeholder="Total Supply" />
+              </LabelWrapper>
+            </InputDiv>
+          </Container>
+
+          <Divider margin="0px" />
+          <ButtonDiv>
+            <button className="nextBtn bottombutton">Create Token</button>
+          </ButtonDiv>
+        </MainContainer>
       </AppBody>
     </PageHeader>
   )
