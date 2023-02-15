@@ -1,29 +1,8 @@
-.maincontainer {
-
-                    margin-top: 50px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 85% ;
-}
-
-.inputdiv {
-                  
-                    margin-bottom: 15px;
-                    margin-top: 15px;
-}
-
-.buttondiv {
-                    margin-top: 30px ;
-                    padding-bottom: 100px;
-                   
-}
-
 .bottombutton {
-                    
-                    font-size: 16px;
-                    background-color: #f8567f;
-                    color: #fff;
-                    padding: 0.8em;
-                    border-radius: 0.25em;
-                    border: none;
+  font-size: 16px;
+  background-color: #f8567f;
+  color: #fff;
+  padding: 0.8em;
+  border-radius: 0.25em;
+  border: none;
 }
