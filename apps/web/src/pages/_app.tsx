@@ -28,6 +28,7 @@ import { SupportedChainsProvider } from 'hooks/useSupportedChains'
 import { CHAIN_IDS } from 'utils/wagmi'
 import './styles/create-launchpad.css'
 import './styles/create-token.css'
+import './styles/current-launchpad.css'
 
 const EasterEgg = dynamic(() => import('components/EasterEgg'), { ssr: false })
 

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Flex } from '@pancakeswap/uikit'
 import styled from 'styled-components'
-import CurrentLaunchpadCard from './Card'
+import CurrentLaunchpadCard from './components/Card'
 
 const ControlContainer = styled.div`
   display: flex;
