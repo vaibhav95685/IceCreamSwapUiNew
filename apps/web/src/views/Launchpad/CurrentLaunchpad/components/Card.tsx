@@ -70,9 +70,11 @@ const CurrentLaunchpadCard = () => {
         <Text marginBottom={'2px'} color="textSubtle" fontSize="15px" textAlign="left">
           Progress (107.87%)
         </Text>
+        
         <progress value={70} max="100"  className="ProgressBar">
           <ProgresBar />
         </progress>
+       
         <Flex justifyContent="space-between" marginTop="10px">
           <Text>Liquidity:</Text>
           <Text>67%</Text>
